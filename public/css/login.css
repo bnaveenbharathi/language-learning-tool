@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5) url(/img/img3.png) no-repeat center/cover; 
+    opacity: 0.8; 
+    z-index: -1;
+    margin-top: -10px;
+    
+}
+
+
+.main-content {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    border: solid 2px #121212;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(0, 0, 0, 0.5);
+   
+}
+
+input {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: solid 2px #121212;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+div {
+    margin: 10px;
+    padding: 10px;
+}
+
+
+input[type='email'] {
+    margin-left: 60px;
+}
+
+input[type='password'] {
+    margin-left: 18px;
+}
+
+button[type='submit'] {
+    background: transparent;
+    color: #121212;
+    border: solid 2px #121212;
+    font-weight: 500;   
+    outline: none !important;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.5s ease, filter 0.9s ease; /* Slow transition */
+}
+
+button[type='submit']:hover {
+    background: linear-gradient(to right, #a6a6a6, #e9e9e9);
+   
+}
+.login p{
+    color: rgb(0, 0, 0);
+    
+}
+.login a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.login a:hover {
+    color: white ;
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .main {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        font-size: large;
+    }
+    
+    .email,
+    .password {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px; 
+    }
+    
+    .email label,
+    .password label {
+        width: 30%; 
+        text-align: left;
+    }
+    
+
+    input[type='email'],
+    input[type='number'] {
+        margin: 0;
+        width: 65%; 
+    }
+}
