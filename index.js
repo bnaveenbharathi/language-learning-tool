@@ -2,8 +2,10 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const userController = require('./controllers/usercontrollers');
+const httpProxy = require('http-proxy');
 
 const app = express();
+const proxy = httpProxy.createProxyServer({ target: 'http://localhost:5000' }); // Add target for proxy
 
 app.set('view engine', 'ejs'); // view engine
 
@@ -13,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Configure express-session
 app.use(session({
-    secret: 'your_secret_key', // Change this to your secret key
+    secret: '9ceee8fddd028b773b7e1f3714efe0960e5f3b7a08dfe45a8c28149e000876fc2beacc9ba657449eabd2670df75d2968e0c2556d55de0eec4c39c983aabc2c20', // Change this to your secret key
     resave: false,
     saveUninitialized: false
 }));
@@ -51,6 +53,20 @@ app.get('/logout', (req, res) => {
 // Auth post
 app.post('/signup', userController.signup);
 app.post('/login', userController.login);
+
+//Proxy connect
+app.all('/*', (req, res) => {
+    proxy.web(req, res, { target: 'http://localhost:5000' }, (err) => {
+        console.error('Proxy error:', err);
+        res.status(500).send('Proxy Error');
+    });
+});
+
+// Error handling for proxy
+proxy.on('error', (err, req, res) => {
+    console.error('Proxy error:', err);
+    res.status(500).send('Proxy Error');
+});
 
 // Server connection
 app.listen('8000', () => {

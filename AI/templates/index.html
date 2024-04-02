@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | G-AI </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Welcome to the G-AI</h1>
+        <p>Type your question below:</p>
+      </div><nav class="navbar">
+        <div class="logo_item">
+          <span>{{ title }}</span>
+        </div>
+        <div class="navbar_content">
+          <i class="fa fa-sun" id="darkLight"></i>
+          <i class="fa fa-bell"></i>
+        </div>
+      </nav>
+      
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fa fa-angle-double-right	" id="btn"> </i>
+      <i class="fa fa-angle-double-left	" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>{{ title }}</header>
+      <a href="#" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="#">
+        <i class="fas fa-link"></i>
+        <span>Shortcuts</span>
+      </a>
+      <a href="#">
+        <i class="fas fa-stream"></i>
+        <span>Overview</span>
+      </a>
+      <a href="#">
+         <i class="fas fa-calendar"></i>
+        <span>Events</span>
+      </a>
+      <a href="#">
+        <i class="far fa-question-circle"></i>
+        <span>About</span>
+      </a>
+      <a href="/Profile">
+        <i class="fa fa-user"></i>
+        <span>Profile</span>
+      </a>
+      <a href="/logout">
+        <i class="fa fa-sign-out"></i>
+        <span>Log out</span>
+      </a>
+    </div>
+    
+
+  
+  <div class="inputbox">
+    <form id="questionForm" action="/ask" method="post" onsubmit="return validateForm()">
+      <input type="text" id="questionInput" name="question" placeholder="Your question..." class="">
+      <button type="button" onclick="askQuestion()" class="btn btn-outline-info">Ask</button>
+    </form>
+  </div>
+  <button id="clearButton" class="btn btn-primary">Clear Responses</button>
+  
+  <div id="responseContainer">
+  </div>
+  <hr><hr><hr>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script>
+    // Function to handle form submission
+    function handleSubmit(question) {
+        var formData = new FormData();
+        formData.append('question', question);
+    
+        // Clear input field
+        document.getElementById('questionInput').value = '';
+    
+        // Create a new response element for the user's question
+        var userQuestionElement = document.createElement('div');
+        userQuestionElement.className = 'response';
+        userQuestionElement.innerHTML = "<h3>You:</h3>" + question ;
+    
+        // Append the user's question to the response container
+        document.getElementById('responseContainer').appendChild(userQuestionElement);
+    
+        // Scroll to bottom of the response container
+        document.getElementById('responseContainer').scrollTop = document.getElementById('responseContainer').scrollHeight;
+    
+        // Make AJAX request to get the response from the server
+        fetch('/ask', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Create a new response element for the server's response
+            var serverResponseElement = document.createElement('div');
+            serverResponseElement.className = 'response';
+            serverResponseElement.innerHTML = "<h3>G-AI:</h3> " + data  ;
+    
+            // Append the server's response to the response container
+            document.getElementById('responseContainer').appendChild(serverResponseElement);
+    
+            // Scroll to bottom of the response container
+            document.getElementById('responseContainer').scrollTop = document.getElementById('responseContainer').scrollHeight;
+        });
+    }
+    
+    // Function to validate form before submission
+    function validateForm() {
+        var questionInput = document.getElementById('questionInput').value.trim();
+        if (questionInput === '') {
+            alert('Please enter your question');
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+    
+    // Function to handle button click
+    function askQuestion() {
+        var questionInput = document.getElementById('questionInput').value.trim();
+        if (questionInput === '') {
+            alert('Please enter your question');
+            return; // Stop function execution
+        }
+        handleSubmit(questionInput);
+    }
+    
+    // Attach event listener to input field to clear responses when input is empty
+    document.getElementById('questionInput').addEventListener('input', function() {
+        if (this.value === '') {
+            document.getElementById('responseContainer').innerHTML = ''; // Clear response container
+        }
+    });
+    
+    // Attach event listener to clear button to clear all responses
+    document.getElementById('clearButton').addEventListener('click', function() {
+        document.getElementById('responseContainer').innerHTML = ''; // Clear response container
+    });
+    
+    // Function to handle form submission on pressing Enter key
+    document.getElementById('questionForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        askQuestion(); // Call askQuestion function to handle the submission
+    });
+  </script>
+</body>
+</html>
