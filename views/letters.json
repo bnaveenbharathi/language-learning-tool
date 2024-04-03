@@ -1,0 +1,30 @@
+{
+    "letters": [
+        { "letter": "A a", "audioPath": "/audio/A.mp3.mp3" },
+        { "letter": "B b", "audioPath": "/audio/B.mp3.mp3" },
+        { "letter": "C c", "audioPath": "/audio/C.mp3.mp3" },
+        { "letter": "D d", "audioPath": "/audio/D.mp3.mp3" },
+        { "letter": "E e", "audioPath": "/audio/E.mp3.mp3" },
+        { "letter": "F f", "audioPath": "/audio/F.mp3.mp3" },
+        { "letter": "G g", "audioPath": "/audio/G.mp3.mp3" },
+        { "letter": "H h", "audioPath": "/audio/H.mp3.mp3" },
+        { "letter": "I i", "audioPath": "/audio/I.mp3.mp3" },
+        { "letter": "J j", "audioPath": "/audio/J.mp3.mp3" },
+        { "letter": "K k", "audioPath": "/audio/K.mp3.mp3" },
+        { "letter": "L l", "audioPath": "/audio/L.mp3.mp3" },
+        { "letter": "M m", "audioPath": "/audio/M.mp3.mp3" },
+        { "letter": "N n", "audioPath": "/audio/N.mp3.mp3" },
+        { "letter": "O o", "audioPath": "/audio/O.mp3.mp3" },
+        { "letter": "P p", "audioPath": "/audio/P.mp3.mp3" },
+        { "letter": "Q q", "audioPath": "/audio/Q.mp3.mp3" },
+        { "letter": "R r", "audioPath": "/audio/R.mp3.mp3" },
+        { "letter": "S s", "audioPath": "/audio/S.mp3.mp3" },
+        { "letter": "T t", "audioPath": "/audio/T.mp3.mp3" },
+        { "letter": "U u", "audioPath": "/audio/U.mp3.mp3" },
+        { "letter": "V v", "audioPath": "/audio/V.mp3.mp3" },
+        { "letter": "W w", "audioPath": "/audio/W.mp3.mp3" },
+        { "letter": "X x", "audioPath": "/audio/X.mp3.mp3" },
+        { "letter": "Y y", "audioPath": "/audio/Y.mp3.mp3" },
+        { "letter": "Z z", "audioPath": "/audio/Z.mp3.mp3" }
+    ]
+}
