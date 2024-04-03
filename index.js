@@ -3,6 +3,7 @@ const session = require('express-session');
 const path = require('path');
 const userController = require('./controllers/usercontrollers');
 const httpProxy = require('http-proxy');
+const lettersData = require('./views/letters.json'); 
 
 const app = express();
 const proxy = httpProxy.createProxyServer({ target: 'http://localhost:5000' }); // Add target for proxy
@@ -30,6 +31,13 @@ app.get('/', (req, res) => {
 app.get('/profile', (req, res) => {
     res.render('profile', { title: title });
 });
+app.get('/dashboard', (req, res) => {
+    res.render('dashboard', { title: title });
+});
+app.get('/alphabets', (req, res) => {
+    res.render('alphabets', { letters: lettersData.letters,title: title });
+});
+
 
 // Auth routes
 app.get('/signup', (req, res) => {
