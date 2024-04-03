@@ -3,53 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %> | Profile</title>
+    <title><%= title %> | Alphapets </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/alphabets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <%- include('sidenavbar') %>
     <div class="main-content  mt-5">
-        <div class="head">
-            <h3>English Alphabets</h3>
-            <p>
-                English alphabet phonetics guide A to Z enhances pronunciation, expands vocabulary, and fosters fluent communication in diverse contexts.</p>
+        <div class="head ">
+            <h3 class=" ">Alphapets learning </h3>
+            <p> Learning the alphabet opens the door to language, paving the way for <br> 
+                endless communication and understanding...</p>
            </div>
-        <div class="contents">
-            <% letters.forEach((letter, index) => { %>
-                <div class="audio-wrapper">
-                    <h5><%= letter.letter %></h5>
-                    <audio id="audio<%= index %>" class="audio-element">
-                        <source src="<%= letter.audioPath %>" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                    <button onclick="toggleAudio('audio<%= index %>')" data-audio="audio<%= index %>" class="play-button"><i class="fa fa-play"></i> Play</button>
-                </div>
-            <% }); %>
+           
+      <section class="part1">
+       
+        <div class="firstone">
+            <img src="/img/languages/english learning.jpg" alt="" class="images">
+            <a href="/englishalphabets" class="button">English</a>
         </div>
-    </div>
-    <script>
-        function toggleAudio(id) {
-            var audio = document.getElementById(id);
-            var button = document.querySelector(`button[data-audio="${id}"]`);
-            
-            if (audio.paused) {
-                audio.play();
-                button.innerHTML = '<i class="fa fa-pause"></i> Pause';
-            } else {
-                audio.pause();
-                button.innerHTML = '<i class="fa fa-play"></i> Play';
-            }
-    
-            // Listen for the 'ended' event and update the button when audio finishes playing
-            audio.addEventListener('ended', function() {
-                button.innerHTML = '<i class="fa fa-play"></i> Play';
-            });
-        }
-    </script>
-   
+        <div class="secondone">
+          <img src="img/languages/tamil learning.jpg" alt="" class="images">
+          <a href="" class="button">Tamil</a>
+        </div>
+        <div class="secondone">
+            <img src="img/languages/hindi learning.png" alt="" class="images">
+            <a href="" class="button">Hindi</a>
+        </div>
+      </section>
+</div>
 </body>
 </html>
