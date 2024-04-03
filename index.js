@@ -34,8 +34,11 @@ app.get('/profile', (req, res) => {
 app.get('/dashboard', (req, res) => {
     res.render('dashboard', { title: title });
 });
+app.get('/englishalphabets', (req, res) => {
+    res.render('englishalphabets', { letters: lettersData.letters,title: title });
+});
 app.get('/alphabets', (req, res) => {
-    res.render('alphabets', { letters: lettersData.letters,title: title });
+    res.render('alphabets',{ title: title });
 });
 
 
