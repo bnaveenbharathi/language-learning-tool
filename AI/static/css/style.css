@@ -271,8 +271,8 @@ margin: 0;
 #responseContainer {
   width: 60%;
   overflow-y: auto;
-  max-height: calc(100vh - 200px);
-  margin-top: 250px;
+  max-height: calc(150vh - 250px);
+  margin-top: 330px;
   border-bottom: solid 2px #A890FE;
  
 }
