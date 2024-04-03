@@ -1,4 +1,3 @@
-
 .frame {
   width: 50%;
   height: 30%;
@@ -318,37 +317,84 @@ text-align: center;
 }
 .contents{
   margin-top: 80px;  
-}
-.contents {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
- .head{
-  display:block;
-  margin-top: 550px;
+  
+}.head {
+  display: block;
+  
+  margin-top: 50px;
   text-align: center;
+  padding:10px;
 }
-.head p{
+
+.head h3 {
+  font-size: xx-large;
+  animation: slideFromLeft 1s forwards;
+}
+
+.head p {
   font-size: large;
   width: 80%;
+  text-align: right;
+  animation: slideFromRight 1s forwards;
+  margin-top: 40px;
+}
 
-  justify-content: center;
-  margin-left: 100px;
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}.part1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.part1 .firstone,
+.part1 .secondone {
+  width: 40%;
+  text-align: center;
+  padding: 20px;
   margin-top: 30px;
 }
 
-.audio-wrapper {
-  width: calc(25% - 20px); /* Adjust based on the number of sections you want in a row */
-  margin-bottom: 50px;
-  text-align: center;
+.part1 .firstone img,
+.part1 .secondone img {
+  width: 260px;
+  height: 200px;
+  border-radius: 10px;
+  animation: slideFromRight 1s forwards;
+  border: solid 1px #121212;
+
 }
-.play-button {
-  outline: none !important;
-  border: none;
-  padding: 5px;
-  background-color: #c1b1f7;
-  border-radius: 5px;
 
-
+.part1 .firstone a,
+.part1 .secondone a {
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 10px;
+  border: solid 1px #121212;
+}
+.button {
+  text-decoration: none;
+  color: black;
+  
+}
+.button:hover{
+  color: #121212;
 }
