@@ -1,0 +1,354 @@
+
+.frame {
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  h2 {
+    position: relative;
+    text-align: center;
+    color: #353535;
+    font-size: 60px;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    color: #a759f5;
+  }
+  
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 30px;
+    color: #d6adff;
+    margin: 0;
+  }
+  
+  #responseContainer {
+    margin-top: 20px;
+  }
+  
+  .response {
+    margin-top: 20px;
+  }
+  *{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  }
+  :root {
+  --accent-color: #fff;
+  --gradient-color: #FBFBFB;
+  }
+  body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-45deg, #e3eefe 0%, #e7f2fd 100%);
+  }
+  
+  .sidebar{
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background-color: #fff;
+  transition: all .5s ease;
+  overflow-y: auto; 
+  z-index: 1000; /* Added z-index */
+  }
+  .sidebar header{
+  font-size: 28px;
+  color: #353535;
+  line-height: 70px;
+  text-align: center;
+  background-color: #fff;
+  user-select: none;
+  font-family: 'Lato', sans-serif;
+  }
+  .sidebar a{
+    
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: #353535;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-left: 5px solid transparent;
+  font-family: 'Lato', sans-serif;
+  transition: all .5s ease;
+  text-decoration: none;
+  }
+  a.active,a:hover{
+  border-left: 5px solid var(--accent-color);
+  color: #fff;
+  background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
+  }
+  .sidebar a i{
+  font-size: 23px;
+  
+  margin-right: 16px;
+  }
+  .sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  }
+  #check{
+  display: none;
+  }
+  label #btn,label #cancel{
+    
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+  left: 5px;
+  cursor: pointer;
+  color: #d6adff;
+  border-radius: 5px;
+  margin: 15px 30px;
+  font-size: 29px;
+  background-color: #e7f2fd;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  inset -7px -7px 10px 0px rgba(0,0,0,.1),
+  3.5px 3.5px 20px 0px rgba(0,0,0,.1),
+  2px 2px 5px 0px rgba(0,0,0,.1);
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  line-height: 45px;
+  transition: all .5s ease;
+  z-index: 9999;
+  }
+  label #cancel{
+  opacity: 0;
+  visibility: hidden;
+  }
+  #check:checked ~ .sidebar{
+  left: 0;
+  }
+  #check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+  }
+  #check:checked ~ label #cancel{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+  }
+  @media(max-width: 860px) {
+  /* Adjustments for header */
+  .heading h1 {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    margin-left: 15px;
+    font-size: xx-large;
+  }
+  
+  .heading p {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    margin-left: 7px;
+    font-size: x-large;
+    margin-top: 50px;
+  }
+  
+  /* Adjustments for sidebar */
+  
+  
+  /* Hide header elements on small screens */
+  header, #btn, #cancel {
+    display:block;
+   
+  }
+  
+  
+  
+  /* Adjust sidebar link height and icon margin */
+  .sidebar a {
+    height: 60px;
+  }
+  
+  .sidebar a i {
+    
+    margin-left: -10px;
+  }
+  
+  .sidebar a:hover span {
+    opacity: 1;
+    visibility: visible;
+  }label #btn,
+  label #cancel {
+    position: fixed;
+    top: 45px; /* Adjust the top position */
+    left: 5px;
+    cursor: pointer;
+    color: #d6adff;
+    border-radius: 5px;
+    margin: 15px 30px;
+    font-size: 29px;
+    background-color: #e8d1ff;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), inset -7px -7px 10px 0px rgba(0, 0, 0, .1), 3.5px 3.5px 20px 0px rgba(0, 0, 0, .1), 2px 2px 5px 0px rgba(0, 0, 0, .1);
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    line-height: 45px;
+    margin-left: -5px;
+    transition: all .5s ease;
+  }
+  
+  
+  /* Add this CSS to ensure the toggle button is displayed */
+  label #cancel {
+  opacity: 0;
+  visibility: hidden;
+  }
+  }
+  
+  
+  .sidebar > a.active,.sidebar > a:hover:nth-child(even) {
+  --accent-color: #52d6f4;
+  --gradient-color: #c1b1f7;
+  }
+  .sidebar a.active,.sidebar > a:hover:nth-child(odd) {
+  --accent-color: #c1b1f7;
+  --gradient-color: #A890FE;
+  }
+  
+  
+  .frame {
+  width: 50%;
+  height: 30%;
+  margin: auto;
+  text-align: center;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .logo_item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .logo_item span {
+    font-size: 18px;
+  }
+  
+  .navbar_content {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  
+  .navbar_content i {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 15px;
+    }
+    
+    .logo_item {
+      font-size: 18px;
+    }
+    
+    .navbar_content i {
+      font-size: 18px;
+    }
+    
+  }
+  @media screen and (max-width:500px) {
+    .main-content{
+        margin-top: 280px !important;
+        width: 180% ;
+     height: 1600px;
+  
+      }
+    
+   .head{
+    display:block;
+    margin-top: 550px;
+    text-align: center;
+  }
+  .head p{
+    font-size: large;
+    width: 80%;
+  
+   display: block;
+   margin-left: -500px;
+    margin-top: 30px;
+  }
+  }
+  .main-content{
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    height: 1200px;
+    
+  }
+  .contents{
+    margin-top: 80px;  
+  }
+  .contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+   .head{
+    display:block;
+    margin-top: 300px;
+    text-align: center;
+  }
+  .head p{
+    font-size: large;
+    width: 80%;
+  
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 30px;
+  }
+  
+  .audio-wrapper {
+    width: calc(25% - 20px); /* Adjust based on the number of sections you want in a row */
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .play-button {
+    outline: none !important;
+    border: none;
+    padding: 5px;
+    background-color: #c1b1f7;
+    border-radius: 5px;
+  
+  
+  }
