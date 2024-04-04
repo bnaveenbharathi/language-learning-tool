@@ -1,0 +1,17 @@
+{
+    "hindiWords": [
+      { "word": "अ", "audioPath": "/hindiaudio/1.mp3" },
+      { "word": "आ", "audioPath": "/hindiaudio/2.mp3" },
+      { "word": "इ", "audioPath": "/hindiaudio/3.mp3" },
+      { "word": "ई", "audioPath": "/hindiaudio/4.mp3" },
+      { "word": "उ", "audioPath": "/hindiaudio/5.mp3" },
+      { "word": "ऊ", "audioPath": "/hindiaudio/6.mp3" },
+      { "word": "ए", "audioPath": "/hindiaudio/7.mp3" },
+      { "word": "ऐ", "audioPath": "/hindiaudio/8.mp3" },
+      { "word": "ओ", "audioPath": "/hindiaudio/9.mp3" },
+      { "word": "औ", "audioPath": "/hindiaudio/10.mp3" },
+      { "word": "अं", "audioPath": "/hindiaudio/am.mp3" },
+      { "word": "अः", "audioPath": "/hindiaudio/aha.mp3" }
+    ]
+  }
+  
