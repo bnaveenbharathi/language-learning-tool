@@ -252,7 +252,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   .logo_item {
-    display: flex;
+    display: block;
     align-items: center;
     column-gap: 10px;
     font-size: 20px;
@@ -301,11 +301,11 @@
     background: #fff;
     padding: 20px;
     width: 80%;
-    height: 980px;
+    height: 1600px;
     
   }
   .contents{
-    margin-top: 160px;
+    margin-top: 430px;
     
     
   }
