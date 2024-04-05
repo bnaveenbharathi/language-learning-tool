@@ -7,6 +7,8 @@ const collection = require('./Database/db');
 const lettersData = require('./views/letters.json');
 const tamillettersData = require('./views/tamil.json');
 const hindilettersData = require('./views/hindi.json');
+const fs = require('fs');
+const gtts = require('gtts');
 
 const app = express();
 const proxy = httpProxy.createProxyServer({ target: 'http://localhost:5000' }); // Add target for proxy
@@ -137,6 +139,32 @@ app.get('/hindialphabets', (req, res) => {
 app.get('/alphabets', (req, res) => {
     res.render('alphabets', { title: title });
 });
+app.get('/Vocabulary', (req, res) => {
+    res.render('Vocabulary', { title: title });
+});
+
+app.get('/audio', async (req, res) => {
+    const text = req.query.text;
+    const language = req.query.language || 'en'; 
+    try {
+        
+        if (!['en'].includes(language)) {
+            throw new Error(`Language not supported: ${language}`);
+        }
+
+        const speech = new gtts(text, language);
+        const audioStream = speech.stream();
+        res.set({
+            'Content-Type': 'audio/mp3',
+            'Content-Disposition': 'inline'
+        });
+        audioStream.pipe(res);
+    } catch (error) {
+        console.error(`Error generating audio for text '${text}':`, error);
+        res.status(500).send('Error generating audio');
+    }
+});
+
 
 // Logout route
 app.get('/logout', (req, res) => {
@@ -182,6 +210,74 @@ app.post('/updateProfile', async (req, res) => {
         res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
 });
+
+app.get('/tamilwords', (req, res) => {
+    // Read JSON file based on language selection
+    const language = req.query.language || ''; 
+    const category = req.query.category || ''; 
+    const data = JSON.parse(fs.readFileSync('./views/tamilword.json', 'utf8'));
+
+    // Extract words based on category if language and category are provided
+    let words = [];
+    if (language && category && data[category]) {
+        words = data[category].map(word => {
+            return {
+                word: word.word,
+                meaning: word.meaning[language] || 'Meaning not available',
+                usage: word.usage[language] || 'Usage not available',
+                audioText: encodeURIComponent(word.word), // Encode the text to handle special characters
+                language: 'en'
+            };
+        });
+    }
+
+    res.render('tamilwords', { words, language, category , title: title }); // Pass category variable
+});
+app.get('/englishwords', (req, res) => {
+    // Read JSON file 
+    const language = req.query.language || ''; 
+    const category = req.query.category || ''; 
+    const data = JSON.parse(fs.readFileSync('./views/englishword.json', 'utf8'));
+
+    // Extract words based on category if language and category are provided
+    let words = [];
+    if (language && category && data[category]) {
+        words = data[category].map(word => {
+            return {
+                word: word.word,
+                meaning: word.meaning[language] || 'Meaning not available',
+                usage: word.usage[language] || 'Usage not available',
+                audioText: encodeURIComponent(word.word), 
+                language: 'en'
+            };
+        });
+    }
+
+    res.render('englishwords', { words, language, category ,title: title }); // Pass category variable
+});
+
+app.get('/hindiwords', (req, res) => {
+    // Read JSON file based on language selection
+    const language = req.query.language || ''; 
+    const category = req.query.category || ''; 
+    const data = JSON.parse(fs.readFileSync('./views/hindiword.json', 'utf8'));
+
+    // Extract words based on category if language and category are provided
+    let words = [];
+    if (language && category && data[category]) {
+        words = data[category].map(word => {
+            return {
+                word: word.word,
+                meaning: word.meaning[language] || 'Meaning not available',
+                usage: word.usage[language] || 'Usage not available',
+                audioText: encodeURIComponent(word.word), // Encode the text to handle special characters
+                language: 'en'
+            };
+        });
+    }
+
+    res.render('hindiwords', { words, language, category , title: title }); // Pass category variable
+});
 // Change password route
 app.post('/changePassword', async (req, res) => {
     const userId = req.session.userId;
@@ -212,7 +308,7 @@ app.post('/changePassword', async (req, res) => {
 });
 
 // Proxy connect
-app.all('/*', (req, res) => {
+app.all('/ai/*', (req, res) => {
     proxy.web(req, res, { target: 'http://localhost:5000' }, (err) => {
         console.error('Proxy error:', err);
         res.status(500).send('Proxy Error');
