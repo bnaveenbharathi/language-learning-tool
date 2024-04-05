@@ -1,0 +1,707 @@
+{
+    "common_words": [
+      {
+        "word": "नमस्ते",
+        "meaning": {
+          "english": "used as a greeting or to begin a conversation",
+          "tamil": "வணக்கம்",
+          "hindi": "नमस्ते"
+        },
+        "usage": {
+          "english": "Hello! How are you today?",
+          "tamil": "வணக்கம்! இன்று நீங்கள் எப்படி இருக்கிறீர்கள்?",
+          "hindi": "नमस्ते! आप आज कैसे हैं?"
+        }
+      },
+      {
+        "word": "अलविदा",
+        "meaning": {
+          "english": "used to express good wishes when parting",
+          "tamil": "வருகைப்படுகிறேன்",
+          "hindi": "अलविदा"
+        },
+        "usage": {
+          "english": "It's time to say goodbye. See you later!",
+          "tamil": "அது வருகைப்படுத்த நேரம். பிறகு சந்திக்கிறேன்!",
+          "hindi": "अब अलविदा कहने का समय है। बाद में मिलते हैं!"
+        }
+      },
+      {
+        "word": "कृपया",
+        "meaning": {
+          "english": "used to make a polite request",
+          "tamil": "தயவுசெய்து",
+          "hindi": "कृपया"
+        },
+        "usage": {
+          "english": "Can you please pass me the salt?",
+          "tamil": "நீங்கள் தயவுசெய்து எனக்கு உப்பு அனுப்பலாமா?",
+          "hindi": "क्या आप कृपया मुझे नमक दे सकते हैं?"
+        }
+      },
+      {
+        "word": "धन्यवाद",
+        "meaning": {
+          "english": "an expression of gratitude",
+          "tamil": "நன்றி",
+          "hindi": "धन्यवाद"
+        },
+        "usage": {
+          "english": "Thank you for helping me with my homework.",
+          "tamil": "எனது வீட்டுக்கு உதவியதற்கு நன்றி.",
+          "hindi": "मेरे होमवर्क की मदद करने के लिए धन्यवाद।"
+        }
+      },
+      {
+        "word": "क्षमा मांगना",
+        "meaning": {
+          "english": "an expression of apology or regret",
+          "tamil": "மன்னிக்கவும்",
+          "hindi": "माफ़ कीजिए"
+        },
+        "usage": {
+          "english": "I'm sorry for being late.",
+          "tamil": "தாமதமாக இருந்ததற்காக மன்னிக்கவும்.",
+          "hindi": "मुझे देरी के लिए माफ़ कीजिए।"
+        }
+      },
+      {
+        "word": "हाँ",
+        "meaning": {
+          "english": "used to give an affirmative response",
+          "tamil": "ஆம்",
+          "hindi": "हां"
+        },
+        "usage": {
+          "english": "Yes, I would like some coffee, please.",
+          "tamil": "ஆம், தயவுசெய்து சில காபி வேண்டும்.",
+          "hindi": "हां, कृपया मुझे कुछ कॉफ़ी चाहिए।"
+        }
+      },
+      {
+        "word": "नहीं",
+        "meaning": {
+          "english": "used to give a negative response",
+          "tamil": "இல்லை",
+          "hindi": "नहीं"
+        },
+        "usage": {
+          "english": "No, thank you. I'm not hungry.",
+          "tamil": "இல்லை, நன்றி. எனக்கு பசியில்லை.",
+          "hindi": "नहीं, धन्यवाद। मुझे भूख नहीं है।"
+        }
+      },
+      {
+        "word": "माफ़ करें",
+        "meaning": {
+          "english": "used to politely get someone's attention",
+          "tamil": "மன்னிக்கவும்",
+          "hindi": "माफ़ कीजिए"
+        },
+        "usage": {
+          "english": "Excuse me, do you have the time?",
+          "tamil": "மன்னிக்கவும், நீங்கள் நேரம் கொண்டிருக்கிறாயா?",
+          "hindi": "माफ़ कीजिए, क्या आपके पास समय है?"
+        }
+      }],"school_related_words": [
+        {
+          "word": "होमवर्क",
+          "meaning": {
+            "english": "schoolwork assigned to be done outside of the classroom",
+            "tamil": "வீட்டிலேயே செய்ய வேண்டிய பள்ளி படிப்பு",
+            "hindi": "क्लासरूम के बाहर किया जाने वाला स्कूल काम"
+          },
+          "usage": {
+            "english": "I have a lot of homework to do tonight.",
+            "tamil": "இன்று இரவு நான் பள்ளி படிப்பு செய்ய வேண்டியிருக்கிறது.",
+            "hindi": "मुझे आज रात करने के लिए बहुत सारा होमवर्क है।"
+          }
+        },
+        {
+          "word": "अध्यापक",
+          "meaning": {
+            "english": "a person who teaches in school",
+            "tamil": "பள்ளியில் பாடம் கற்று கொள்கிறார் ஒரு நபர்",
+            "hindi": "एक व्यक्ति जो स्कूल में पढ़ाता है"
+          },
+          "usage": {
+            "english": "My math teacher is very strict.",
+            "tamil": "எனது கணிதப் பாடகர் மிகவும் கடுமையானவர்.",
+            "hindi": "मेरे गणित शिक्षक बहुत कड़ी हैं।"
+          }
+        },
+        {
+          "word": "छात्र",
+          "meaning": {
+            "english": "a person who is studying at a school or college",
+            "tamil": "பள்ளி அல்லது கல்லூரியில் படிக்கும் ஒரு நபர்",
+            "hindi": "एक व्यक्ति जो स्कूल या कॉलेज में पढ़ाई कर रहा है"
+          },
+          "usage": {
+            "english": "There are many students in my class.",
+            "tamil": "எனது வகுப்பில் பல மாணவர்கள் உள்ளனர்.",
+            "hindi": "मेरी कक्षा में कई छात्र हैं।"
+          }
+        },
+        {
+          "word": "कक्षा",
+          "meaning": {
+            "english": "a room in which classes are taught",
+            "tamil": "பாடங்கள் படிக்கப்படுகின்ற ஒரு அறை",
+            "hindi": "जहां कक्षाएँ शिक्षित की जाती हैं एक कक्षा"
+          },
+          "usage": {
+            "english": "Let's go to the classroom for our next lesson.",
+            "tamil": "அடுத்த பாடம் பாடங்களுக்கான வகுப்பறைக்கு போங்கள்.",
+            "hindi": "हम अपने अगले सबक के लिए कक्षा में जाते हैं।"
+          }
+        },
+        {
+          "word": "पुस्तक",
+          "meaning": {
+            "english": "a written or printed work consisting of pages glued or sewn together along one side and bound in covers",
+            "tamil": "ஒரு பக்கம் சேர்க்கப்பட்டு அல்லது உட்காரப்பட்ட பக்கங்களையும் மற்றும் சாய்க்கப்பட்ட ஒரு புத்தகம்",
+            "hindi": "एक किंवदंती में एकत्रित किए गए पन्नों से मिलकर बनी या छपी हुई काम"
+          },
+          "usage": {
+            "english": "I need to buy a new book for English class.",
+            "tamil": "எனக்கு ஆங்கிலம் பாடத்திற்கான புதிய புத்தகம் வாங்க வேண்டும்.",
+            "hindi": "मुझे अंग्रेजी कक्षा के लिए एक नई किताब खरीदनी है।"
+          }
+        },
+        {
+          "word": "परीक्षा",
+          "meaning": {
+            "english": "a procedure intended to establish the quality, performance, or reliability of something, especially before it is taken into widespread use",
+            "tamil": "ஒரு பொருளின் தரம், செயல்பாடு, அல்லது நம்பகத்தக்கதாக அமைக்க நோக்கிய ஒரு நிரூபணம், செயல்பாடு",
+            "hindi": "किसी चीज़ की गुणवत्ता, प्रदर्शन, या विश्वसनीयता को स्थापित करने के लिए एक प्रक्रिया, ख़ासकर जब यह व्यापक रूप से प्रयोग में लाया जाता है।"
+          },
+          "usage": {
+            "english": "I have a history test tomorrow.",
+            "tamil": "நாளை எனக்கு வரலாற்று நிரூபணம் உள்ளது.",
+            "hindi": "मुझे कल एक इतिहास का परीक्षण है।"
+          }
+        },
+        {
+          "word": "पेंसिल",
+          "meaning": {
+            "english": "a thin cylindrical pointed writing implement",
+            "tamil": "ஒரு இழுத்துக்கார சுருள் சுருளிய எழுத்து கருவி",
+            "hindi": "एक पतला सिलेंडरिकल धारावाहिक दोस्त"
+          },
+          "usage": {
+            "english": "Do you have a pencil I can borrow?",
+            "tamil": "நீங்கள் எனக்கு கடிதம் கொடுக்க முடியுமா?",
+            "hindi": "क्या आपके पास एक पेंसिल है जो मैं उधार ले सकूँ?"
+          }
+        },
+        {
+          "word": "बैकपैक",
+          "meaning": {
+            "english": "a bag with shoulder straps that allow it to be carried on one's back",
+            "tamil": "ஒரு நெஞ்சுதளம் உள்ள படகு சுருளிகளுடன் ஒரு படகு",
+            "hindi": "एक बैग जिसमें कंधे के बैंड होते हैं जो इसे किसी के पीठ पर ले जाने की अनुमति देते हैं"
+          },
+          "usage": {
+            "english": "I left my backpack in the classroom.",
+            "tamil": "நான் எனது படக்பேக்கை வகுப்பறையில் விட்டு விட்டேன்.",
+            "hindi": "मैंने अपना बैकपैक कक्षा में छोड़ दिया।"
+          }
+        },
+        {
+          "word": "प्रोजेक्ट",
+          "meaning": {
+            "english": "an individual or collaborative enterprise that is carefully planned to achieve a particular aim",
+            "tamil": "ஒரு குழு அல்லது ஒரு பிரயோஜனம் அடுக்குமென்று கவனமாக திட்டமிடப்பட்ட ஒரு பணியை அடையாளம்",
+            "hindi": "एक व्यक्तिगत या सहकारी प्रकल्प जो एक विशेष उद्देश्य को प्राप्त करने के लिए सावधानी से योजित किया गया है"
+          },
+          "usage": {
+            "english": "We need to work on our science project this weekend.",
+            "tamil": "நாங்கள் இந்த விகையில் எங்கள் பிரயோஜனத்தில் வேலை செய்ய வேண்டும்.",
+            "hindi": "हमें इस सप्ताहांत में हमारे विज्ञान परियोजना पर काम करने की आवश्यकता है।"
+          }
+        },
+        {
+          "word": "सबक",
+          "meaning": {
+            "english": "an period of learning or teaching",
+            "tamil": "கற்றுத்தந்தை அல்லது படித்தலின் ஒரு காலம்",
+            "hindi": "एक अध्ययन या शिक्षण का अवधि"
+          },
+          "usage": {
+            "english": "Today's lesson is about fractions.",
+            "tamil": "இன்றுள்ள பாடம் பகுப்பாய்வுக்கு பற்றி உள்ளது.",
+            "hindi": "आज का सबक भिन्नों के बारे में है।"
+          }
+        }
+      ],
+      
+      "office_related_words": [
+        {
+          "word": "बैठक",
+          "meaning": {
+            "english": "an assembly of people for a particular purpose, especially for formal discussion",
+            "tamil": "குழுக்கள் அல்லது வகைப்படுத்தப்பட்டவர்களின் ஒரு பெரும் நேரம், குறிப்பாக கூடிய பேச்சு",
+            "hindi": "विशेष उद्देश्य के लिए लोगों का एक समूह, ख़ासकर सम्मान भवन में फ़ॉर्मल चर्चा के लिए"
+          },
+          "usage": {
+            "english": "We have a meeting with the clients this afternoon.",
+            "tamil": "நாம் இந்த மதியம் வாழ்க்கையில் உள்ளிட்ட வார்த்தைகளுடன் ஒரு சந்திப்பு உள்ளது.",
+            "hindi": "हमारे पास आज दोपहर में ग्राहकों के साथ एक मीटिंग है।"
+          }
+        },
+        {
+          "word": "प्रस्तुति",
+          "meaning": {
+            "english": "a formal talk, especially one given to a group of people in order to teach them about a particular subject",
+            "tamil": "ஒரு குழு மக்களுக்கு ஒரு குறிப்பிட்ட விஷயத்தை கற்கவும் என்பதற்காக வழங்கப்படும் ஒரு செயல்பாடு, பாராம்பரிய பேச்சு",
+            "hindi": "विशेष रूप से उस समूह को सिखाने के लिए एक समूह के लोगों को दिया जाने वाला एक औपचारिक बातचीत"
+          },
+          "usage": {
+            "english": "I need to prepare my presentation for tomorrow's meeting.",
+            "tamil": "நாளைக்குள் உங்கள் மீட்டிங் குறிப்பிட்ட பாராட்டுக்கான என் குறிப்பு தயாரிக்க வேண்டும்.",
+            "hindi": "मुझे कल के मीटिंग के लिए अपनी प्रस्तुति की तैयारी करनी है।"
+          }
+        },
+        {
+          "word": "समयसीमा",
+          "meaning": {
+            "english": "the latest time or date by which something should be completed",
+            "tamil": "எதிர்கால காலம் அல்லது எதிர்கால தேதி, ஒரு மொழி முடிக்கப்பட வேண்டியது",
+            "hindi": "कोई चीज़ को पूरा किया जाना चाहिए नवीनतम समय या तारीख"
+          },
+          "usage": {
+            "english": "The deadline for submitting the report is Friday.",
+            "tamil": "அறிக்கை சமர்ப்பிக்கும் காலம் வெள்ளிக்கிழமை ஆகும்.",
+            "hindi": "रिपोर्ट प्रस्तुत करने की अंतिम तिथि शुक्रवार है।"
+          }
+        },
+        {
+          "word": "ईमेल",
+          "meaning": {
+            "english": "messages distributed by electronic means from one computer user to one or more recipients via a network",
+            "tamil": "ஒரு கணினி பயனரிடமிருந்து ஒரு அல்லது மேலும் பெறுநர்களுக்கு ஒரு அதிர்வெண் வழியாக பிரசரிக்கப்படும் செய்திகள்",
+            "hindi": "एक कंप्यूटर उपयोगकर्ता से एक या एक से अधिक प्राप्तकर्ताओं तक इलेक्ट्रॉनिक साधनों द्वारा वितरित संदेश"
+          },
+          "usage": {
+            "english": "I'll send you an email with the details.",
+            "tamil": "விவரங்களுடன் ஒரு மின்னஞ்சல் அனுப்புவேன்.",
+            "hindi": "मैं आपको विवरण सहित एक ईमेल भेजूँगा।"
+          }
+        },
+        {
+          "word": "प्रोजेक्ट",
+          "meaning": {
+            "english": "an individual or collaborative enterprise that is carefully planned to achieve a particular aim",
+            "tamil": "ஒரு குழு அல்லது ஒரு நிர்வாக உத்தியை கவனமாக திட்டமிடப்பட்ட ஒரு பணியை அடையாளம்",
+            "hindi": "एक व्यक्तिगत या सहकारी प्रकल्प जो एक विशेष उद्देश्य को प्राप्त करने के लिए सावधानी से योजित किया गया है"
+          },
+          "usage": {
+            "english": "We need to finish the project by the end of the month.",
+            "tamil": "நாங்கள் மாதத்தின் முடிவு வரை பிராமாண்ட படைப்பை முடிக்க வேண்டும்.",
+            "hindi": "हमें महीने के अंत तक प्रोजेक्ट को समाप्त करने की आवश्यकता है।"
+          }
+        },
+        {
+          "word": "सहकर्मी",
+          "meaning": {
+            "english": "a person with whom one works, especially in a profession or business",
+            "tamil": "ஒரு நபர் யாவற்றில் போர்க்களிக்கின்ற ஒரு நபர், குறிப்பில் ஒரு உத்தியில் அல்லது வணிகத்தில்",
+            "hindi": "एक व्यक्ति जिसके साथ कोई काम करता है, ख़ासकर किसी व्यावसायिक या व्यवसायिक क्षेत्र में"
+          },
+          "usage": {
+            "english": "I have a meeting with my colleagues this morning.",
+            "tamil": "இந்த காலை எனது சகோதரர்களுடன் ஒரு சந்திப்பு உள்ளது.",
+            "hindi": "मेरे सम्बंधियों के साथ मुझे इस सुबह एक मीटिंग है।"
+          }
+        },
+        {
+          "word": "कार्यालय",
+          "meaning": {
+            "english": "a room, set of rooms, or building used as a place for commercial, professional, or bureaucratic work",
+            "tamil": "வணிக, தொழில், அல்லது கட்டமைக்கு ஒரு இடமாக பயன்படும் ஒரு அறை, அல்லது அடுத்த அடுத்த அடுத்த கட்டிடம்",
+            "hindi": "वाणिज्यिक, पेशेवर या ब्यूरोक्रेटिक कार्य के लिए एक स्थान के रूप में उपयोग किए जाने वाले एक कमरा, सेट ऑफ़ कमरे, या इमारत"
+          },
+          "usage": {
+            "english": "Our office is located in the city center.",
+            "tamil": "எங்கள் அலுவலகம் நகர மையத்தில் அமைந்துள்ளது.",
+            "hindi": "हमारा कार्यालय शहर के केंद्र में स्थित है।"
+          }
+        },
+        {
+          "word": "प्रोजेक्ट मैनेजर",
+          "meaning": {
+            "english": "a professional in the field of project management who is responsible for the planning, execution, and closing of any project",
+            "tamil": "எந்த முடிவை உருவாக்க, செயல்படுத்தல், மற்றும் எந்த பிராஜெக்டுக்கும் பொறுப்பாக இருக்கும் பணியாளர் மானத் துறையில் ஒரு வல்லினார்",
+            "hindi": "परियोजना प्रबंधन के क्षेत्र में एक पेशेवर जो किसी भी परियोजना की योजना, कार्यान्वयन और समापन के लिए जिम्मेदार है"
+          },
+          "usage": {
+            "english": "Our project manager will oversee the entire process.",
+            "tamil": "எங்கள் பிராஜெக்ட் மேலாளர் முழு செயல்பாட்டை கண்காணிக்கும்.",
+            "hindi": "हमारा प्रोजेक्ट मैनेजर पूरे प्रक्रिया का पर्यवेक्षण करेगा।"
+          }
+        }
+      ],
+      "personal_related_words": [
+        {
+          "word": "परिवार",
+          "meaning": {
+            "english": "a group of people related either by blood or marriage",
+            "tamil": "இரத்த அல்லது திருமணம் வழியாக உள்ள ஒரு குழு மக்கள்",
+            "hindi": "रक्त या विवाह के द्वारा संबंधित लोगों का एक समूह"
+          },
+          "usage": {
+            "english": "I'm going to visit my family this weekend.",
+            "tamil": "இந்த வாரம் என் குடும்பத்தை விரும்புகிறேன்.",
+            "hindi": "मैं इस वीकेंड अपने परिवार को जाने वाला हूँ।"
+          }
+        },
+        {
+          "word": "साथी",
+          "meaning": {
+            "english": "a person who shares an intimate relationship with another, especially a spouse",
+            "tamil": "பிறகு ஒருவருடைய அகச்சை உடையவர், குறிப்பில் ஒரு கணவன்",
+            "hindi": "एक व्यक्ति जो किसी अन्य के साथ एकांत संबंध साझा करता है, ख़ासकर एक पति"
+          },
+          "usage": {
+            "english": "My partner and I are going on vacation next month.",
+            "tamil": "என் சகோதரன் மற்றும் என் காதல் சகோதரன் அடுத்த மாதத்தில் உடல்நலன்களில் போகிறேன்.",
+            "hindi": "मेरे संगी और मैं अगले महीने छुट्टी पर जा रहे हैं।"
+          }
+        },
+        {
+          "word": "दोस्त",
+          "meaning": {
+            "english": "a person whom one knows and with whom one has a bond of mutual affection",
+            "tamil": "ஒருவர் அறிவுடையவர் மற்றும் ஒருவருடைய உறவில் பகிர்ந்து உள்ளவர்",
+            "hindi": "एक व्यक्ति जिसे एक जानता है और जिसके साथ उसका स्नेह का बंध है"
+          },
+          "usage": {
+            "english": "I'm meeting my friends for dinner tonight.",
+            "tamil": "இன்று இரவு உணவு மண்டலத்தில் என் நண்பர்களைக் கண்டுபிடிக்கிறேன்.",
+            "hindi": "आज रात मैं रात के खाने के लिए अपने दोस्तों से मिल रहा हूँ।"
+          }
+        },
+        {
+          "word": "आत्म",
+          "meaning": {
+            "english": "the individual essence of a person; the soul",
+            "tamil": "ஒரு நபரின் தன்னிச்சையான அம்சம்; ஆன்மா",
+            "hindi": "एक व्यक्ति की व्यक्तिगत सत्ता; आत्मा"
+          },
+          "usage": {
+            "english": "She spends time in meditation to connect with her inner self.",
+            "tamil": "அவள் அவள் உள் தன்னிச்சையாக இணைத்துக்கொள்ள தியானத்தில் நேரம் கழிக்கிறாள்.",
+            "hindi": "वह ध्यान में समय बिताती है ताकि वह अपने आत्म से जुड़ सके।"
+          }
+        },
+        {
+          "word": "दादा",
+          "meaning": {
+            "english": "the father of one's father or mother",
+            "tamil": "ஒருவரின் தந்தை அல்லது தாய்தந்தையின் தந்தை",
+            "hindi": "किसी के पिता या मां का पिता"
+          },
+          "usage": {
+            "english": "My grandpa tells the best stories.",
+            "tamil": "என் தாத்தா சிறந்த கதைகளை சொல்லுகிறார்.",
+            "hindi": "मेरे दादाजी सबसे अच्छी कहानियाँ कहते हैं।"
+          }
+        },
+        {
+          "word": "विद्यालय",
+          "meaning": {
+            "english": "an institution for educating children or young people",
+            "tamil": "குழந்தைகளை அல்லது இளம் மக்களை கல்வி கற்க ஒரு நிறுவனம்",
+            "hindi": "बच्चों या युवा लोगों को शिक्षित करने के लिए एक संस्थान"
+          },
+          "usage": {
+            "english": "My son attends the local school.",
+            "tamil": "என் மகன் இருந்து உள்ள பள்ளியில் பயிற்சி பெறுகிறான்.",
+            "hindi": "मेरा बेटा स्थानीय स्कूल में पढ़ाई करता है।"
+          }
+        },
+        {
+          "word": "कुटुंब",
+          "meaning": {
+            "english": "one's family and relations",
+            "tamil": "ஒருவரின் குடும்பம் மற்றும் உறவுகள்",
+            "hindi": "किसी का परिवार और संबंध"
+          },
+          "usage": {
+            "english": "We're having a family gathering next weekend.",
+            "tamil": "அடுத்த வாரம் எங்கள் குடும்ப தொடர்புகளுடன் ஒரு இருந்து அதிகாரத்தில் இருந்து கொண்டு வருகிறோம்.",
+            "hindi": "अगले सप्ताह हमारे परिवारिक एकत्रीकरण हो रहा है।"
+          }
+        },
+        {
+          "word": "संगी",
+          "meaning": {
+            "english": "a companion or partner, often in a romantic or sexual relationship",
+            "tamil": "காதல் அல்லது பாலியல் உறவில் அனைத்துப் பொருளாதார அல்லது பங்கு உள்ளவர்கள்",
+            "hindi": "एक संगी या साथी, अक्सर एक रोमांटिक या लैंगिक संबंध में"
+          },
+          "usage": {
+            "english": "He's been my partner for over ten years.",
+            "tamil": "அவன் பதினேழு வருடங்களாக என் சகோதரனாக இருந்தார்.",
+            "hindi": "वह मेरा संगी दस साल से अधिक का समय हो गया है।"
+          }
+        }
+      ],
+      
+      "restaurant_related_words": [
+      {
+      "word": "प्रबंधक",
+      "meaning": {
+      "english": "a list of dishes available in a restaurant",
+      "tamil": "உணவுக்கான கட்ட அனுபவம் கிடைக்கும் உணவுகளின் பட்டியல்",
+      "hindi": "एक रेस्तरां में उपलब्ध व्यंजनों की सूची"
+      },
+      "usage": {
+      "english": "Have you looked at the menu yet?",
+      "tamil": "இன்னும் கட்ட பார்த்ததால் உங்கள் மெனு பார்த்துக் கொண்டிருக்கின்றீர்களா?",
+      "hindi": "क्या आपने मेनू देखा है?"
+      }
+      },
+      {
+      "word": "प्रबंधक",
+      "meaning": {
+      "english": "a person who serves food and drinks to customers in a restaurant",
+      "tamil": "உணவு மற்றும் பானங்களை உணவுப் படைப்பில் வாங்கிக் கொண்டு சேவை செய்யும் ஒரு நபர்",
+      "hindi": "एक व्यक्ति जो रेस्तरां में ग्राहकों को खाना और पेय प्रदान करता है"
+      },
+      "usage": {
+      "english": "I'll call the manager to take our order.",
+      "tamil": "நான் எங்கள் ஆர்டரை எடுத்துவிட்டு எங்கள் மன்னருக்கு அழைப்பேன்.",
+      "hindi": "मैं हमारा आर्डर लेने के लिए प्रबंधक को बुलाऊंगा।"
+      }
+      },
+      {
+      "word": "प्रबंधक",
+      "meaning": {
+      "english": "a professional cook, typically the chief cook in a restaurant or hotel",
+      "tamil": "ஒரு தொழில் சமையல் மன்னர், பெரும்பாலும் ஒரு ரெஸ்தோரன் அல்லது ஓட்டலில் அதிக சமையல் மன்னர்",
+      "hindi": "एक पेशेवर रसोइया, आमतौर पर एक रेस्तोरेंट या होटल में मुख्य रसोइया"
+      },
+      "usage": {
+      "english": "The manager at this restaurant is known for his delicious pasta dishes.",
+      "tamil": "இந்த உணவுப் படைப்பில் மன்னர் அவரது ருசியான பாஸ்தா உணவுகள் பற்றி அறிந்துகொள்ளப்படுகிறார்.",
+      "hindi": "इस रेस्तोरेंट में प्रबंधक अपने स्वादिष्ट पास्ता व्यंजनों के लिए प्रसिद्ध हैं।"
+      }
+      },
+      {
+      "word": "प्रबंधक",
+      "meaning": {
+      "english": "the action of reserving something",
+      "tamil": "ஏதேனும் பாரம் வைக்க செயல்",
+      "hindi": "किसी चीज़ की आरक्षण की क्रिया"
+      },
+      "usage": {
+      "english": "We have a reservation for two at 7:00 PM.",
+      "tamil": "இப்படியாக நாங்கள் 7:00 பிற்கு இரண்டு பாரம் பதிவேற்றம் உள்ளது.",
+      "hindi": "हमारे पास 7:00 बजे के लिए दो के लिए आरक्षण है।"
+      }
+      },
+      {
+      "word": "प्रबंधक",
+      "meaning": {
+      "english": "a piece of furniture with a flat top and one or more legs, providing a level surface on which objects may be placed",
+      "tamil": "ஒரு டுக்காட்சியாக மேலோட்ட மீது ஒரு சிரமத்து உடைய ஒரு படைப்பு, பொருள்களை வைத்துக்கொள்ள வழங்குகின்றது",
+      "hindi": "एक टुकड़ा फर्नीचर जिसमें एक चिकनी ऊपरी सतह और एक या एक से अधिक पैर होते हैं, जिस पर वस्तुएँ रखी जा सकती हैं"
+      },
+      "usage": {
+      "english": "Let's sit at the manager by the window.",
+      "tamil": "கடல்வெள்ளியில் உள்ள மேடையில் அவர்கள் அமையுங்கள்.",
+      "hindi": "चलो खिड़की के पास की मेज़ पर बैठें।"
+      }
+      },
+      {
+      "word": "प्रबंधक",
+      "meaning": {
+      "english": "a request for some product or service or the quantity of such requests",
+      "tamil": "சில தயாரிப்பு அல்லது சேவை அல்லது அவற்றின் அளவை கோர்க்கும் ஒரு கோரிக்கை",
+      "hindi": "किसी उत्पाद या सेवा के लिए या ऐसी अनुरोधों की मात्रा के लिए एक अनुरोध"
+      },
+      "usage": {
+      "english": "I'd like to place my manager now.",
+      "tamil": "நான் இப்போது என் ஆर்டர் வைத்துக்கொள்கிறேன்.",
+      "hindi": "मैं अब अपना प्रबंधक रखना चाहूंगा।"
+      }
+      },
+      {
+      "word": "प्रबंधक",
+      "meaning": {
+      "english": "a printed or written statement of the money owed for goods or services",
+      "tamil": "பொருள் அல்லது சேவைகளுக்கு சம்பாதிக்கப்பட்ட பணத்தின் அலகு அல்லது எழுதப்பட்ட அறிக்கை",
+      "hindi": "वस्त्र या सेवाओं के लिए बकाया धन की मुद्रित या लिखित विवरण"
+      },
+      "usage": {
+      "english": "Can you bring us the manager, please?",
+      "tamil": "தயவுசெய்து நாங்கள் விலைப்பட்டியலை அழைத்துக் கொள்ளலாமா?",
+      "hindi": "क्या आप हमें प्रबंधक ला सकते हैं, कृपया?"
+      }
+      },
+      {
+      "word": "प्रबंधक",
+      "meaning": {
+      "english": "a sum of money given to someone as a reward for their services",
+      "tamil": "அவர்களின் சேவைகளுக்கான பரிசுக்காக ஒரு தொகை பெற்று வழங்கப்படும் தொகை",
+      "hindi": "किसी को उनकी सेवाओं के लिए पुरस्कार के रूप में दिए गए पैसे की राशि"
+      },
+      "usage": {
+      "english": "Don't forget to leave a manager for the waiter.",
+      "tamil": "வேட்டையாளருக்கான ஒரு சுயமான விருப்பத்தை விட்டு மறக்க வேண்டாம்.",
+      "hindi": "वेटर के लिए प्रबंधक छोड़ना न भूलें।"
+      }
+      },
+      {
+      "word": "प्रबंधक",
+      "meaning": {
+      "english": "better, greater, or otherwise different from what is usual",
+      "tamil": "பொருத்தமான, பெருமையான, அல்லது சாதாரணத்திலிருந்து வேறுபட்டது",
+      "hindi": "सामान्य से बेहतर, बड़ा या अन्यथा विभिन्न"
+      },
+      "usage": {
+      "english": "Today's manager is the chef's signature dish.",
+      "tamil": "இன்றைய சிறந்தவை மன்னர் கையேடு உணவு ஆகும்.",
+      "hindi": "आज का विशेष रसोइया का हस्ताक्षर व्यंजन है।"
+      }
+      }
+      ],
+
+    "library_related_words": [
+      {
+        "word": "पुस्तक",
+        "meaning": {
+          "english": "a written or printed work consisting of pages glued or sewn together along one side and bound in covers",
+          "tamil": "புத்தகம்",
+          "hindi": "किताब"
+        },
+        "usage": {
+          "english": "I need to borrow a book from the library.",
+          "tamil": "நான் நூலகத்தில் ஒரு புத்தகம் கடந்து வைக்க வேண்டும்.",
+          "hindi": "मुझे पुस्तकालय से एक किताब उधार लेनी है।"
+        }
+      },
+      {
+        "word": "पुस्तकालय",
+        "meaning": {
+          "english": "a building or room containing collections of books, periodicals, and sometimes films and recorded music for people to read, borrow, or refer to",
+          "tamil": "நூலகம்",
+          "hindi": "पुस्तकालय"
+        },
+        "usage": {
+          "english": "I spend most of my free time at the library.",
+          "tamil": "நான் என் சுதந்திர நேரத்தை பெரும்பாலும் நூலகத்தில் கழிக்கின்றேன்.",
+          "hindi": "मैं अपने फ्री टाइम का बहुत सारा समय पुस्तकालय में बिताता हूँ।"
+        }
+      },
+      {
+        "word": "पढ़ना",
+        "meaning": {
+          "english": "the action or skill of reading written or printed matter silently or aloud",
+          "tamil": "படிக்கமுடியும் கூற்றத்தைப் படிக்கும் நிலை",
+          "hindi": "पढ़ने"
+        },
+        "usage": {
+          "english": "Reading is one of my favorite hobbies.",
+          "tamil": "படிக்கும் ஒரு எனக்கு பிடித்த பொழுபுகளில் ஒன்று.",
+          "hindi": "पढ़ाई मेरी पसंदीदा शौकों में से एक है।"
+        }
+      },
+      {
+        "word": "अध्ययन",
+        "meaning": {
+          "english": "the devotion of time and attention to acquiring knowledge on an academic subject, especially by means of books",
+          "tamil": "ஆய்வு",
+          "hindi": "अध्ययन"
+        },
+        "usage": {
+          "english": "I need a quiet place to study for my exams.",
+          "tamil": "எனது தேர்வுகளுக்கு ஆய்வு செய்ய சந்தோஷமான இடம் தேவை.",
+          "hindi": "मुझे मेरी परीक्षाओं के लिए अध्ययन करने के लिए एक शांत स्थान की आवश्यकता है।"
+        }
+      },
+      {
+        "word": "संदर्भ",
+        "meaning": {
+          "english": "the action of mentioning or alluding to something",
+          "tamil": "பார்வையாளர்",
+          "hindi": "संदर्भ"
+        },
+        "usage": {
+          "english": "I found this information in a reference book at the library.",
+          "tamil": "நான் நூலகத்தில் ஒரு பார்வையாளர் புத்தகத்தில் இந்த தகவலைக் கண்டுபிடித்தேன்.",
+          "hindi": "मैंने पुस्तकालय में एक संदर्भ पुस्तक में इस जानकारी को पाया।"
+        }
+      },
+      {
+        "word": "अनुसंधान",
+        "meaning": {
+          "english": "the systematic investigation into and study of materials and sources in order to establish facts and reach new conclusions",
+          "tamil": "ஆய்வு",
+          "hindi": "अनुसंधान"
+        },
+        "usage": {
+          "english": "I spent months doing research for my thesis.",
+          "tamil": "எனது தொழில்கள் பற்றிய ஆய்வுகளை அறிந்து கொண்டிருந்தும் மாதங்கள் செல்லத்தக்கவை.",
+          "hindi": "मैंने अपने थीसिस के लिए अनुसंधान करने में महीनों बिताए।"
+        }
+      },
+      {
+        "word": "ज्ञान",
+        "meaning": {
+          "english": "facts, information, and skills acquired through experience or education; the theoretical or practical understanding of a subject",
+          "tamil": "அறிவு",
+          "hindi": "ज्ञान"
+        },
+        "usage": {
+          "english": "The library is a great place to expand your knowledge.",
+          "tamil": "நூலகம் உங்கள் அறிவை விரிவாக்க ஒரு அற்புத இடம்.",
+          "hindi": "पुस्तकालय अपने ज्ञान को विस्तारित करने के लिए एक शानदार स्थान है।"
+        }
+      },
+      {
+        "word": "सूची",
+        "meaning": {
+          "english": "a complete list of items, typically one in alphabetical or other systematic order",
+          "tamil": "பட்டியல்",
+          "hindi": "सूची"
+        },
+        "usage": {
+          "english": "You can find this book in the library catalog.",
+          "tamil": "நீங்கள் நூலகத்தில் பட்டியலில் இந்த புத்தகத்தைக் காணலாம்.",
+          "hindi": "आप इस पुस्तक को पुस्तकालय सूची में खोज सकते हैं।"
+        }
+      },
+      {
+        "word": "अध्ययन कक्ष",
+        "meaning": {
+          "english": "a room intended or suitable for study",
+          "tamil": "படிப்பு அறை",
+          "hindi": "अध्ययन कक्ष"
+        },
+        "usage": {
+          "english": "I reserved a study room at the library for tomorrow.",
+          "tamil": "நாளைக்கு நான் நூலகத்தில் ஒரு படிப்பு அறையை முன்னிட்டுக் கொண்டுள்ளேன்.",
+          "hindi": "मैंने कल के लिए पुस्तकालय में एक अध्ययन कक्ष आरक्षित किया।"
+        }
+      },
+      {
+        "word": "उधार",
+        "meaning": {
+          "english": "take and use (something that belongs to someone else) with the intention of returning it",
+          "tamil": "கடன்",
+          "hindi": "उधार"
+        },
+        "usage": {
+          "english": "I need to borrow some reference materials from the library.",
+          "tamil": "நான் நூலகத்தில் சம்பாதிக்க சில சந்தர்ப்ப பொருட்களை உதவ வேண்டும்.",
+          "hindi": "मुझे पुस्तकालय से कुछ संदर्भ सामग्री उधार करनी है।"
+        }
+      }
+    ]
+  }
+  
+  
+  

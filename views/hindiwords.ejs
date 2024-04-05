@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Tamil Words </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/tamilwords.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <%- include('sidenavbar') %>
+    <div class="main-content container">
+        <div class="contents">
+            <h3 id="h3">Hindi Word Dictionary</h3>
+            <form action="/hindiwords" method="GET">
+                <label for="language">Native Language:</label>
+                <select name="language" id="language">
+                    <option value="" <% if (!language) { %>selected<% } %>>Select</option>
+                    <option value="english" <% if (language === 'english') { %>selected<% } %>>English</option>
+                    <option value="tamil" <% if (language === 'tamil') { %>selected<% } %>>Tamil</option>
+                    <option value="hindi" <% if (language === 'hindi') { %>selected<% } %>>Hindi</option>
+                </select>
+                <label for="category">Select Category:</label>
+                <select name="category" id="category">
+                    <option value="" <% if (!category) { %>selected<% } %>>Select</option>
+                    <option value="common_words" <% if (category === 'common_words') { %>selected<% } %>>Common Words</option>
+                    <option value="school_related_words" <% if (category === 'school_related_words') { %>selected<% } %>>School Related Words</option>
+                    <option value="office_related_words" <% if (category === 'office_related_words') { %>selected<% } %>>Office Related Words</option>
+                    <option value="restaurant_related_words" <% if (category === 'restaurant_related_words') { %>selected<% } %>>Restaurant Related Words</option>
+                    <option value="library_related_words" <% if (category === 'library_related_words') { %>selected<% } %>>Library Related Words</option>
+                </select>
+                <button type="submit" id="subbtn">Submit</button>
+            </form>
+            <div class="teaching">
+                <% if (words && words.length > 0) { %>
+                    <h3 class="h3">Words and Definitions</h3>
+                    <% words.forEach((word, index) => { %>
+                        <div id="wordssec">
+                            <h3><%= index + 1 + ". " + word.word %></h3>
+                            <audio id="audioPlayer<%= index + 1 %> " >
+                                <source src="http://localhost:3000/audio?text=<%= word.audioText %>&language=en" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div>
+                                <button onclick="playAudio('<%= word.audioText %>')" id="audiobtn">Play</button>
+                            </div>
+                            <p id="p"><b>Meaning:</b> <%= word.meaning %></p>
+                            <p id="p"><b>Usage:</b> <%= word.usage %></p>
+                            
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <p>Please select a language and a category to see words and definitions.</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+<script>
+    function playAudio(audioText) {
+        var audioPlayer = new Audio("http://localhost:3000/audio?text=" + audioText + "&language=en");
+        audioPlayer.play();
+    }
+</script>
+</body>
+</html>
