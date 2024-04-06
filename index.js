@@ -38,6 +38,27 @@ const authenticateUser = (req, res, next) => {
     }
 };
 
+const renderUsername = async (req, res, next) => {
+    try {
+        const userId = req.session.userId; // Retrieve userId from session
+        if (!userId) {
+            res.locals.username = null; // Set username to null if user is not logged in
+            return next();
+        }
+        
+        // Fetch user data from the database
+        const user = await collection.findOne({ _id: userId });
+
+        // Set username to the locals object for use in templates
+        res.locals.username = user.name;
+        next();
+    } catch (error) {
+        console.error("Error rendering username:", error);
+        res.locals.username = null;
+        next();
+    }
+};
+app.use(renderUsername);
 // Routes accessible without authentication
 app.get('/', (req, res) => {
     res.render('index', { title: title });
@@ -98,6 +119,7 @@ app.post('/login', async (req, res) => {
         return res.status(500).send("Internal Server Error");
     }
 });
+
 
 // Protected routes (accessible only to authenticated users)
 app.use(authenticateUser);
@@ -212,12 +234,12 @@ app.post('/updateProfile', async (req, res) => {
 });
 
 app.get('/tamilwords', (req, res) => {
+    
     // Read JSON file based on language selection
     const language = req.query.language || ''; 
     const category = req.query.category || ''; 
     const data = JSON.parse(fs.readFileSync('./views/tamilword.json', 'utf8'));
 
-    // Extract words based on category if language and category are provided
     let words = [];
     if (language && category && data[category]) {
         words = data[category].map(word => {
@@ -239,7 +261,6 @@ app.get('/englishwords', (req, res) => {
     const category = req.query.category || ''; 
     const data = JSON.parse(fs.readFileSync('./views/englishword.json', 'utf8'));
 
-    // Extract words based on category if language and category are provided
     let words = [];
     if (language && category && data[category]) {
         words = data[category].map(word => {
@@ -262,7 +283,6 @@ app.get('/hindiwords', (req, res) => {
     const category = req.query.category || ''; 
     const data = JSON.parse(fs.readFileSync('./views/hindiword.json', 'utf8'));
 
-    // Extract words based on category if language and category are provided
     let words = [];
     if (language && category && data[category]) {
         words = data[category].map(word => {
@@ -322,6 +342,6 @@ proxy.on('error', (err, req, res) => {
 });
 
 // Server connection
-app.listen('8000', () => {
-    console.log('Server is running on port http://localhost:8000');
+app.listen('3000', () => {
+    console.log('Server is running on port http://localhost:3000');
 });
