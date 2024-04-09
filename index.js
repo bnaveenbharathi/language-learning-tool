@@ -7,6 +7,7 @@ const collection = require('./Database/db');
 const lettersData = require('./views/letters.json');
 const tamillettersData = require('./views/tamil.json');
 const hindilettersData = require('./views/hindi.json');
+const { analyzeText, generateAudioForLetter, generateAudioForWord, generateSplitAudioForWord } = require('./NLP/wordaudiogen');
 const fs = require('fs');
 const gtts = require('gtts');
 
@@ -164,6 +165,48 @@ app.get('/alphabets', (req, res) => {
 app.get('/Vocabulary', (req, res) => {
     res.render('Vocabulary', { title: title });
 });
+app.get('/wordaudio', (req, res) => {
+    res.render('wordaudio', { title: title });
+});
+
+app.post('/generate-audio', async (req, res) => {
+    const word = req.body.word.toUpperCase();
+
+    // Start the timer for NLP analysis
+    console.time('nlpAnalysis');
+
+    const nlpAnalysis = analyzeText(word);
+
+    console.timeEnd('nlpAnalysis');
+
+    // Start the timer for generating audio for the word
+    console.time('generateAudioForWord');
+
+    const wordAudio = await generateAudioForWord(word);
+
+    console.timeEnd('generateAudioForWord');
+
+    console.time('generateSplitAudioForWord');
+
+    const wordsplitAudio = await generateSplitAudioForWord(word);
+
+    console.timeEnd('generateSplitAudioForWord');
+
+    console.time('generateAudioForLetter');
+
+    // Generate audio for each letter in the word
+    const letters = word.split('');
+    const letterAudios = [];
+    for (const letter of letters) {
+        const letterAudio = await generateAudioForLetter(letter);
+        letterAudios.push(letterAudio);
+    }
+
+    console.timeEnd('generateAudioForLetter');
+
+    res.render('generateaudio', { word, wordAudio, letters, letterAudios, wordsplitAudio, nlpAnalysis,title:title });
+});
+
 
 app.get('/audio', async (req, res) => {
     const text = req.query.text;
