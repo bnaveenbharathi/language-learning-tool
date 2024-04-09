@@ -313,6 +313,8 @@ text-align: center;
   padding: 20px;
   width: 80%;
   height: 1800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   
 }
 .contents{
@@ -397,4 +399,18 @@ text-align: center;
 }
 .button:hover{
   color: #121212;
+}
+.head button{
+  margin-top: 25px;
+  padding: 7px;
+  
+  outline: none;
+  border: 1px solid #840aff;
+  border-radius: 5px;
+}
+.head a button{
+  color: #a759f5;
+  text-decoration: none;
+  background: none;
+
 }
