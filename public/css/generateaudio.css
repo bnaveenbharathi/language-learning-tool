@@ -1,0 +1,337 @@
+
+.frame {
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  h2 {
+    position: relative;
+    text-align: center;
+    color: #353535;
+    font-size: 60px;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    color: #a759f5;
+  }
+  
+  
+  #responseContainer {
+    margin-top: 20px;
+  }
+  
+  .response {
+    margin-top: 20px;
+  }
+  *{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  }
+  :root {
+  --accent-color: #fff;
+  --gradient-color: #FBFBFB;
+  }
+  body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-45deg, #e3eefe 0%, #e7f2fd 100%);
+  }
+  
+  .sidebar{
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background-color: #fff;
+  transition: all .5s ease;
+  z-index: 1000; /* Added z-index */
+  }
+  .sidebar header{
+  font-size: 28px;
+  color: #353535;
+  line-height: 70px;
+  text-align: center;
+  background-color: #fff;
+  user-select: none;
+  font-family: 'Lato', sans-serif;
+  }
+  .sidebar a{
+    
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: #353535;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-left: 5px solid transparent;
+  font-family: 'Lato', sans-serif;
+  transition: all .5s ease;
+  text-decoration: none;
+  }
+  a.active,a:hover{
+  border-left: 5px solid var(--accent-color);
+  color: #fff;
+  background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
+  }
+  .sidebar a i{
+  font-size: 23px;
+  
+  margin-right: 16px;
+  }
+  .sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  }
+  #check{
+  display: none;
+  }
+  label #btn,label #cancel{
+    
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+  left: 5px;
+  cursor: pointer;
+  color: #d6adff;
+  border-radius: 5px;
+  margin: 15px 30px;
+  font-size: 29px;
+  background-color: #e7f2fd;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  inset -7px -7px 10px 0px rgba(0,0,0,.1),
+  3.5px 3.5px 20px 0px rgba(0,0,0,.1),
+  2px 2px 5px 0px rgba(0,0,0,.1);
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  line-height: 45px;
+  transition: all .5s ease;
+  z-index: 9999;
+  }
+  label #cancel{
+  opacity: 0;
+  visibility: hidden;
+  }
+  #check:checked ~ .sidebar{
+  left: 0;
+  }
+  #check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+  }
+  #check:checked ~ label #cancel{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+  }
+  @media(max-width: 860px) {
+  /* Adjustments for header */
+ 
+  
+  /* Adjustments for sidebar */
+  
+  
+  /* Hide header elements on small screens */
+  header, #btn, #cancel {
+    display:block;
+   
+  }
+  
+  
+  
+  /* Adjust sidebar link height and icon margin */
+  .sidebar a {
+    height: 60px;
+  }
+  
+  .sidebar a i {
+    
+    margin-left: -10px;
+  }
+  
+  /* Adjust hover width for sidebar links */
+  
+  
+  /* Show span on hover for sidebar links */
+  .sidebar a:hover span {
+    opacity: 1;
+    visibility: visible;
+  }
+  label #btn,
+  label #cancel {
+  position: absolute;
+  left: 5px;
+  cursor: pointer;
+  color: #d6adff;
+  border-radius: 5px;
+  margin: 15px 30px;
+  font-size: 29px;
+  background-color: #e8d1ff;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), inset -7px -7px 10px 0px rgba(0, 0, 0, .1), 3.5px 3.5px 20px 0px rgba(0, 0, 0, .1), 2px 2px 5px 0px rgba(0, 0, 0, .1);
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  line-height: 45px;
+  margin-left: -5px;
+  transition: all .5s ease;
+  }
+  
+  /* Add this CSS to ensure the toggle button is displayed */
+  label #cancel {
+  opacity: 0;
+  visibility: hidden;
+  }
+  }
+  
+  
+  .sidebar > a.active,.sidebar > a:hover:nth-child(even) {
+  --accent-color: #52d6f4;
+  --gradient-color: #c1b1f7;
+  }
+  .sidebar a.active,.sidebar > a:hover:nth-child(odd) {
+  --accent-color: #c1b1f7;
+  --gradient-color: #A890FE;
+  }
+  
+  
+  .frame {
+  width: 50%;
+  height: 30%;
+  margin: auto;
+  text-align: center;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .logo_item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .logo_item span {
+    font-size: 18px;
+  }
+  
+  .navbar_content {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  
+  .navbar_content i {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 15px;
+    }
+    
+    .logo_item {
+      font-size: 18px;
+    }
+    
+    .navbar_content i {
+      font-size: 18px;
+    }
+  }
+  
+
+
+  .main-content{
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    min-height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(124, 9, 181, 0.3);
+    overflow-y: scroll;
+    
+    
+  }
+  .contents{
+    margin-top: 70px;
+    text-align: center;
+    padding: 30px;
+   
+    
+  }
+  .contents h1{
+    text-align: center;
+    margin-bottom: 50px;
+    color: #A890FE;
+  }
+  .contents b{
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000000;
+  }
+  
+audio {
+    margin-bottom: 20px;
+}
+
+.letter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.letter-card {
+    width: 45%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #a008e1;
+    border-radius: 5px;
+}
+
+.letter-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.letter-audio {
+    margin-top: 10px;
+}
+.contents h3{
+    color: #a008e1;
+    margin-bottom: 10px;
+}
+.contents p{
+    color: #a008e1;
+   
+}
+.letter-card button{
+    padding: 3px;
+    outline: none;
+    background: #c1b1f7;
+    border-radius: 5px;
+    border: 1px solid #353535;
+}
