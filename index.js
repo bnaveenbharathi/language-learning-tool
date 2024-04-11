@@ -28,7 +28,7 @@ app.use(session({
 }));
 
 const title = "G-Fluent";
-
+const data = JSON.parse(fs.readFileSync('views/tenses.json', 'utf8'));
 // check if the user is authenticated
 const authenticateUser = (req, res, next) => {
     // Check if user is logged in
@@ -123,7 +123,7 @@ app.post('/login', async (req, res) => {
 
 
 // Protected routes (accessible only to authenticated users)
-app.use(authenticateUser);
+// app.use(authenticateUser);
 
 app.get('/profile', async (req, res) => {
     try {
@@ -164,6 +164,28 @@ app.get('/alphabets', (req, res) => {
 });
 app.get('/Vocabulary', (req, res) => {
     res.render('Vocabulary', { title: title });
+});
+app.get('/grammar', (req, res) => {
+    res.render('grammar', { title: title });
+});
+app.get('/englishgrammar', (req, res) => {
+    res.render('englishgrammar', { title: title });
+});
+app.get('/subjectverb', (req, res) => {
+    res.render('subjectverb', { title: title });
+});
+app.get('/punctuation', (req, res) => {
+    res.render('Punctuation', { title: title });
+});
+app.get('/tenselearning', (req, res) => {
+    const tenses = Object.keys(data.tenses);
+    res.render('tenselearning', { tenses ,title: title });
+});
+app.post('/tense', (req, res) => {
+    const selectedTense = req.body.tense;
+    const tenseData = data.tenses[selectedTense];
+    const examples = tenseData ? tenseData.examples : [];
+    res.render('tenselearning', { selectedTense, examples, tenses: Object.keys(data.tenses),title: title  });
 });
 app.get('/wordaudio', (req, res) => {
     res.render('wordaudio', { title: title });
