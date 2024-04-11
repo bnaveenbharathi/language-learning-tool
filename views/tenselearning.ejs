@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Tense Learning</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/tenselearning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <%- include('sidenavbar') %>
+    <div class="main-content container">
+        <div class="contents">
+            <h1>Tense Examples</h1>
+            <form id="tenseForm" action="/tense" method="post">
+                <label for="tense">Choose a tense:</label>
+                <select name="tense" id="tense">
+                    <option value="" selected>Select</option>
+                    <% tenses.forEach(tense => { %>
+                        <option value="<%= tense %>"><%= tense %></option>
+                    <% }); %>
+                </select>
+                <br>
+                <label for="nativeLanguage">your native language:</label>
+                <select name="nativeLanguage" id="nativeLanguage">
+                    <option >Select</option>
+                    <option value="english">English</option>
+                    <option value="tamil">Tamil</option>
+                    <option value="hindi">Hindi</option>
+                </select><br><br>
+                <button type="submit">Show Examples</button>
+            </form>
+            <div id="tenseDescription"></div>
+            <div id="examplesContainer">
+                <% if (typeof examples !== 'undefined' && examples.length > 0) { %>
+                    <h2>Examples for <%= selectedTense %>:</h2>
+                    <table class="table table-hover">
+                        <tr>
+                            <th>Incorrect Sentence</th>
+                            <th>Corrected Sentence</th>
+                        </tr>
+                        <% examples.forEach(example => { %>
+                            <tr>
+                                <td><%= example.incorrect %></td>
+                                <td><%= example.correct %></td>
+                            </tr>
+                        <% }); %>
+                    </table>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <script>
+
+const tenseForm = document.getElementById('tenseForm');
+    const tenseDescription = document.getElementById('tenseDescription');
+    const nativeLanguageSelect = document.getElementById('nativeLanguage');
+
+    // Tense descriptions in multiple languages
+  const tenseDescriptions = {
+    'Present Simple Tense': {
+        'english': 'The present simple tense is used to describe habitual actions, general truths, and unchanging situations.',
+        'tamil': 'நிகழ் எளிய காலம் வகையை பயன்படுத்துவதற்கு பயன்படுகிறது, ஒருமிக்க உண்மைகளை விவரிக்கும் மற்றும் மாறாத சூழ்நிலைகளை விளக்குகின்றது.',
+        'hindi': 'वर्तमान सामान्य काल का उपयोग आदतन क्रियाएँ, सामान्य सत्य और अपरिवर्तनीय स्थितियों का वर्णन करने के लिए किया जाता है।'
+    },
+    'Present Continuous Tense': {
+        'english': 'The present continuous tense is used to describe actions that are happening now, at the moment of speaking.',
+        'tamil': 'நிகழ் தொலைப்பு காலம் இப்போது நடக்கும் நடவடிக்கைகளை விவரிக்கும் காலமாகும், பேசுவதற்கு உதவும்.',
+        'hindi': 'वर्तमान क्रियावली काल का उपयोग वे क्रियाएँ करने के लिए किया जाता है जो अभी, वार्ता करने के समय हो रही हैं।'
+    },
+    'Present Perfect Tense': {
+        'english': 'The present perfect tense is used to describe actions that happened at an indefinite time in the past or have relevance to the present moment.',
+        'tamil': 'தற்காலிக காலம் அல்லது தற்காலிகமாக நிகழ்ந்த நடவடிக்கைகளை விவரிக்க பயன்படுகின்றது அல்லது தற்போதைய காலத்துக்கு சம்பந்தமானவை.',
+        'hindi': 'वर्तमान पूर्ण काल का उपयोग वे क्रियाएँ करने के लिए किया जाता है जो अपरिभाषित समय में अथवा वर्तमान क्षण में प्रमुख्यता रखती हैं।'
+    },
+    'Present Perfect Continuous Tense': {
+        'english': 'The present perfect continuous tense is used to describe actions that started in the past and are still continuing in the present or have just stopped.',
+        'tamil': 'தற்காலிக முடிவுக்குப் போது தற்காலிகமாக துவக்கம் செய்யப்பட்ட நடவடிக்கைகளை விவரிக்க பயன்படுகின்றது, அல்லது தற்போதைய நேரத்தில் தொடங்கியுள்ளன.',
+        'hindi': 'वर्तमान पूर्ण लगातार काल का उपयोग वे क्रियाएँ करने के लिए किया जाता है जो पिछले में शुरू हुई और वर्तमान में अथवा अभी हाल ही में रुकी हैं।'
+    },
+    'Past Simple Tense': {
+        'english': 'The past simple tense is used to describe completed actions or events that happened at a specific time in the past.',
+        'tamil': 'கடந்த எளிய காலம் நிகழ்ந்த நடவடிக்கைகளை விவரிக்க பயன்படுகிறது அல்லது கடந்த காலத்தில் உள்ள உறுதியான நேரத்தில் நிகழ்ந்த நிகழ்ச்சிகளை விவரிக்கும்.',
+        'hindi': 'भूतकाल साधारण काल का उपयोग वे पूर्ण किए गए कार्य या घटनाओं के वर्णन के लिए किया जाता है जो निश्चित समय पर भूतकाल में हुई थीं।'
+    },
+    'Past Continuous Tense': {
+        'english': 'The past continuous tense is used to describe actions that were ongoing at a specific time in the past.',
+        'tamil': 'கடந்த தொலைப்பு காலம் நிகழ்ந்த நேரத்தில் செய்கைகளை விவரிக்கும் காலமாகும்.',
+        'hindi': 'भूतकाल लगातार काल का उपयोग वे क्रियाएँ करने के लिए किया जाता है जो निश्चित समय पर चल रही थीं।'
+    },
+    'Past Perfect Tense': {
+        'english': 'The past perfect tense is used to describe actions that were completed before a certain point in the past.',
+        'tamil': 'முந்தைய காலத்திற்கு முன்பு முடிவுப் போது நிகழ்ந்த நடவடிக்கைகளை விவரிக்க பயன்படுகின்றது.',
+        'hindi': 'भूतकाल पूर्ण काल का उपयोग वे क्रियाएँ करने के लिए किया जाता है जो भूतकाल में किसी निश्चित बिंदु से पहले पूरा हो चुके थे।'
+    },
+    'Past Perfect Continuous Tense': {
+        'english': 'The past perfect continuous tense is used to describe actions that were ongoing and had been continuously happening before a certain point in the past.',
+        'tamil': 'முந்தைய காலத்திற்கு முன்பு முடிவுப் போது நிகழ்ந்த மீது நடக்கும் நடவடிக்கைகளை விவரிக்க பயன்படுகின்றது.',
+        'hindi': 'भूतकाल पूर्ण लगातार काल का उपयोग वे क्रियाएँ करने के लिए किया जाता है जो भूतकाल में किसी निश्चित बिंदु से पहले लगातार चल रही थीं।'
+    },
+    'Future Simple Tense': {
+        'english': 'The future simple tense is used to describe actions that will happen at a specific time in the future.',
+        'tamil': 'எதிர்கால எளிய காலம் நிகழ்ந்த நிகழ்வுகளை விவரிக்கும் காலமாகும்.',
+        'hindi': 'भविष्य साधारण काल का उपयोग भविष्य में निश्चित समय पर होने वाली क्रियाओं का वर्णन करने के लिए किया जाता है।'
+    },
+    'Future Continuous Tense': {
+        'english': 'The future continuous tense is used to describe actions that will be ongoing at a specific time in the future.',
+        'tamil': 'எதிர்கால தொலைப்பு காலம் நிகழ்ந்த நிகழ்வுகளை விவரிக்கும் காலமாகும்.',
+        'hindi': 'भविष्य लगातार काल का उपयोग भविष्य में निश्चित समय पर चल रही क्रियाओं का वर्णन करने के लिए किया जाता है।'
+    },
+};
+
+
+tenseForm.addEventListener('submit', function(event) {
+    const selectedTense = tenseForm.tense.value;
+    const selectedLanguage = nativeLanguageSelect.value;
+    if (selectedTense === '' || selectedLanguage === '') {
+        event.preventDefault(); // Prevent form submission
+        alert("Please select both a tense and a native language.");
+    }
+    });
+
+    tenseForm.addEventListener('change', function() {
+        const selectedTense = tenseForm.tense.value;
+        const selectedLanguage = nativeLanguageSelect.value;
+        if (selectedTense !== '' && selectedLanguage !== '') {
+            const tenseDescriptionHtml = `
+                <h2>Description of ${selectedTense}:</h2>
+                <p><strong>${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)}:</strong> ${tenseDescriptions[selectedTense][selectedLanguage]}</p>
+            `;
+            tenseDescription.innerHTML = tenseDescriptionHtml;
+        } else {
+            tenseDescription.innerHTML = '';
+        }
+    });
+    </script>
+</body>
+</html>

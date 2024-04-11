@@ -1,0 +1,445 @@
+{
+    "tenses": {
+        "Present Simple Tense": {
+            "examples": [
+                {
+                    "incorrect": "She read books every evening.",
+                    "correct": "She reads books every evening."
+                },
+                {
+                    "incorrect": "He work at a bank.",
+                    "correct": "He works at a bank."
+                },
+                {
+                    "incorrect": "They is happy.",
+                    "correct": "They are happy."
+                },
+                {
+                    "incorrect": "It do not matter.",
+                    "correct": "It does not matter."
+                },
+                {
+                    "incorrect": "She always speak the truth.",
+                    "correct": "She always speaks the truth."
+                },
+                {
+                    "incorrect": "He have a dog.",
+                    "correct": "He has a dog."
+                },
+                {
+                    "incorrect": "They think it is easy.",
+                    "correct": "They think it is easy."
+                },
+                {
+                    "incorrect": "He believe in ghosts.",
+                    "correct": "He believes in ghosts."
+                },
+                {
+                    "incorrect": "It smell good.",
+                    "correct": "It smells good."
+                },
+                {
+                    "incorrect": "She need some help.",
+                    "correct": "She needs some help."
+                }
+            ]
+        },
+        "Present Continuous Tense": {
+            "examples": [
+                {
+                    "incorrect": "They play football right now.",
+                    "correct": "They are playing football right now."
+                },
+                {
+                    "incorrect": "I write a letter at the moment.",
+                    "correct": "I am writing a letter at the moment."
+                },
+                {
+                    "incorrect": "She read a book now.",
+                    "correct": "She is reading a book now."
+                },
+                {
+                    "incorrect": "He speak with her.",
+                    "correct": "He is speaking with her."
+                },
+                {
+                    "incorrect": "They go to school.",
+                    "correct": "They are going to school."
+                },
+                {
+                    "incorrect": "It rain outside.",
+                    "correct": "It is raining outside."
+                },
+                {
+                    "incorrect": "He make a mistake.",
+                    "correct": "He is making a mistake."
+                },
+                {
+                    "incorrect": "She listen to music.",
+                    "correct": "She is listening to music."
+                },
+                {
+                    "incorrect": "They wait for you.",
+                    "correct": "They are waiting for you."
+                },
+                {
+                    "incorrect": "I teach English.",
+                    "correct": "I am teaching English."
+                }
+            ]
+        },
+        "Present Perfect Tense": {
+            "examples": [
+                {
+                    "incorrect": "I see that movie before.",
+                    "correct": "I have seen that movie before."
+                },
+                {
+                    "incorrect": "He finish his homework.",
+                    "correct": "He has finished his homework."
+                },
+                {
+                    "incorrect": "They go to Paris yet.",
+                    "correct": "They have gone to Paris."
+                },
+                {
+                    "incorrect": "She write a book.",
+                    "correct": "She has written a book."
+                },
+                {
+                    "incorrect": "He eat lunch.",
+                    "correct": "He has eaten lunch."
+                },
+                {
+                    "incorrect": "It rain today.",
+                    "correct": "It has rained today."
+                },
+                {
+                    "incorrect": "She visit her parents.",
+                    "correct": "She has visited her parents."
+                },
+                {
+                    "incorrect": "They speak with him.",
+                    "correct": "They have spoken with him."
+                },
+                {
+                    "incorrect": "He go to the gym.",
+                    "correct": "He has gone to the gym."
+                },
+                {
+                    "incorrect": "I finish my work.",
+                    "correct": "I have finished my work."
+                }
+            ]
+        },
+        "Present Perfect Continuous Tense": {
+            "examples": [
+                {
+                    "incorrect": "He work hard lately.",
+                    "correct": "He has been working hard lately."
+                },
+                {
+                    "incorrect": "She wait for you since morning.",
+                    "correct": "She has been waiting for you since morning."
+                },
+                {
+                    "incorrect": "I study for the exam all day.",
+                    "correct": "I have been studying for the exam all day."
+                },
+                {
+                    "incorrect": "They play basketball.",
+                    "correct": "They have been playing basketball."
+                },
+                {
+                    "incorrect": "He read a book.",
+                    "correct": "He has been reading a book."
+                },
+                {
+                    "incorrect": "It rain all week.",
+                    "correct": "It has been raining all week."
+                },
+                {
+                    "incorrect": "She learn Spanish.",
+                    "correct": "She has been learning Spanish."
+                },
+                {
+                    "incorrect": "They wait for the bus.",
+                    "correct": "They have been waiting for the bus."
+                },
+                {
+                    "incorrect": "He write an essay.",
+                    "correct": "He has been writing an essay."
+                },
+                {
+                    "incorrect": "I watch TV.",
+                    "correct": "I have been watching TV."
+                }
+            ]
+        },
+        "Past Simple Tense": {
+            "examples": [
+                {
+                    "incorrect": "She finishes her homework yesterday.",
+                    "correct": "She finished her homework yesterday."
+                },
+                {
+                    "incorrect": "He wrote a letter last night.",
+                    "correct": "He wrote a letter last night."
+                },
+                {
+                    "incorrect": "They goes to the market yesterday.",
+                    "correct": "They went to the market yesterday."
+                },
+                {
+                    "incorrect": "It rain last week.",
+                    "correct": "It rained last week."
+                },
+                {
+                    "incorrect": "She read a book.",
+                    "correct": "She read a book."
+                },
+                {
+                    "incorrect": "He eat lunch.",
+                    "correct": "He ate lunch."
+                },
+                {
+                    "incorrect": "They visit their grandparents.",
+                    "correct": "They visited their grandparents."
+                },
+                {
+                    "incorrect": "I finish my work.",
+                    "correct": "I finished my work."
+                },
+                {
+                    "incorrect": "She write a poem.",
+                    "correct": "She wrote a poem."
+                },
+                {
+                    "incorrect": "He go to the gym.",
+                    "correct": "He went to the gym."
+                }
+            ]
+        },
+        "Past Continuous Tense": {
+            "examples": [
+                {
+                    "incorrect": "They watch TV when I call.",
+                    "correct": "They were watching TV when I called."
+                },
+                {
+                    "incorrect": "She cook dinner at 8 PM.",
+                    "correct": "She was cooking dinner at 8 PM."
+                },
+                {
+                    "incorrect": "He read a book when you come.",
+                    "correct": "He was reading a book when you came."
+                },
+                {
+                    "incorrect": "I work on my project.",
+                    "correct": "I was working on my project."
+                },
+                {
+                    "incorrect": "They play soccer.",
+                    "correct": "They were playing soccer."
+                },
+                {
+                    "incorrect": "It rain outside.",
+                    "correct": "It was raining outside."
+                },
+                {
+                    "incorrect": "She wait for you.",
+                    "correct": "She was waiting for you."
+                },
+                {
+                    "incorrect": "He speak with her.",
+                    "correct": "He was speaking with her."
+                },
+                {
+                    "incorrect": "They go to school.",
+                    "correct": "They were going to school."
+                },
+                {
+                    "incorrect": "I teach English.",
+                    "correct": "I was teaching English."
+                }
+            ]
+        },
+        "Past Perfect Tense": {
+            "examples": [
+                {
+                    "incorrect": "She go to bed when I arrive.",
+                    "correct": "She had gone to bed when I arrived."
+                },
+                {
+                    "incorrect": "I finish my work before you call.",
+                    "correct": "I had finished my work before you called."
+                },
+                {
+                    "incorrect": "They already leave when we reach.",
+                    "correct": "They had already left when we reached."
+                },
+                {
+                    "incorrect": "He write a letter.",
+                    "correct": "He had written a letter."
+                },
+                {
+                    "incorrect": "She eat lunch.",
+                    "correct": "She had eaten lunch."
+                },
+                {
+                    "incorrect": "It rain today.",
+                    "correct": "It had rained today."
+                },
+                {
+                    "incorrect": "She visit her parents.",
+                    "correct": "She had visited her parents."
+                },
+                {
+                    "incorrect": "They speak with him.",
+                    "correct": "They had spoken with him."
+                },
+                {
+                    "incorrect": "He go to the gym.",
+                    "correct": "He had gone to the gym."
+                },
+                {
+                    "incorrect": "I finish my work.",
+                    "correct": "I had finished my work."
+                }
+            ]
+        },
+        "Past Perfect Continuous Tense": {
+            "examples": [
+                {
+                    "incorrect": "He work for two hours before he come home.",
+                    "correct": "He had been working for two hours before he came home."
+                },
+                {
+                    "incorrect": "She study all day before she go out.",
+                    "correct": "She had been studying all day before she went out."
+                },
+                {
+                    "incorrect": "I wait for him for an hour before he arrive.",
+                    "correct": "I had been waiting for him for an hour before he arrived."
+                },
+                {
+                    "incorrect": "He paint the wall.",
+                    "correct": "He had been painting the wall."
+                },
+                {
+                    "incorrect": "She sleep for hours.",
+                    "correct": "She had been sleeping for hours."
+                },
+                {
+                    "incorrect": "It rain for days.",
+                    "correct": "It had been raining for days."
+                },
+                {
+                    "incorrect": "I work on my project.",
+                    "correct": "I had been working on my project."
+                },
+                {
+                    "incorrect": "He cook dinner.",
+                    "correct": "He had been cooking dinner."
+                },
+                {
+                    "incorrect": "She wait for the train.",
+                    "correct": "She had been waiting for the train."
+                },
+                {
+                    "incorrect": "They read a book.",
+                    "correct": "They had been reading a book."
+                }
+            ]
+        },
+        "Future Simple Tense": {
+            "examples": [
+                {
+                    "incorrect": "She will go to the market tomorrow.",
+                    "correct": "She will go to the market tomorrow."
+                },
+                {
+                    "incorrect": "He will leave for Paris next week.",
+                    "correct": "He will leave for Paris next week."
+                },
+                {
+                    "incorrect": "They will eat lunch at 1 PM.",
+                    "correct": "They will eat lunch at 1 PM."
+                },
+                {
+                    "incorrect": "I will visit my parents next month.",
+                    "correct": "I will visit my parents next month."
+                },
+                {
+                    "incorrect": "She will start her new job on Monday.",
+                    "correct": "She will start her new job on Monday."
+                },
+                {
+                    "incorrect": "He will meet his friend in the evening.",
+                    "correct": "He will meet his friend in the evening."
+                },
+                {
+                    "incorrect": "They will go on vacation next summer.",
+                    "correct": "They will go on vacation next summer."
+                },
+                {
+                    "incorrect": "She will buy a new car next year.",
+                    "correct": "She will buy a new car next year."
+                },
+                {
+                    "incorrect": "I will move to a new city next month.",
+                    "correct": "I will move to a new city next month."
+                },
+                {
+                    "incorrect": "He will start his own business.",
+                    "correct": "He will start his own business."
+                }
+            ]
+        },
+        "Future Continuous Tense": {
+            "examples": [
+                {
+                    "incorrect": "I will be traveling to Paris tomorrow.",
+                    "correct": "I will be traveling to Paris tomorrow."
+                },
+                {
+                    "incorrect": "She will be working at the office at 9 AM.",
+                    "correct": "She will be working at the office at 9 AM."
+                },
+                {
+                    "incorrect": "They will be watching a movie in the evening.",
+                    "correct": "They will be watching a movie in the evening."
+                },
+                {
+                    "incorrect": "He will be attending the meeting tomorrow.",
+                    "correct": "He will be attending the meeting tomorrow."
+                },
+                {
+                    "incorrect": "She will be driving to work next week.",
+                    "correct": "She will be driving to work next week."
+                },
+                {
+                    "incorrect": "I will be sleeping early tonight.",
+                    "correct": "I will be sleeping early tonight."
+                },
+                {
+                    "incorrect": "He will be cooking dinner for the party.",
+                    "correct": "He will be cooking dinner for the party."
+                },
+                {
+                    "incorrect": "She will be studying for the exam tomorrow.",
+                    "correct": "She will be studying for the exam tomorrow."
+                },
+                {
+                    "incorrect": "They will be watching the sunset on the beach.",
+                    "correct": "They will be watching the sunset on the beach."
+                },
+                {
+                    "incorrect": "I will be working on my project all night.",
+                    "correct": "I will be working on my project all night."
+                }
+            ]
+        }
+    }
+  }
+  

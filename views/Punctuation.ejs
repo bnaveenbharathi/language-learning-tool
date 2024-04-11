@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Punctuation learning</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/subjectverb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <%- include('sidenavbar') %>
+    <div class="main-content container">
+        <div class="contents">
+   
+            <h2>Punctuation Corrections</h2>
+
+            <div id="language-selection">
+                <p>Please select your native language:</p>
+                <select id="language-select">
+                    <option >Select</option>
+                    <option value="english">English</option>
+                    <option value="tamil">Tamil</option>
+                    <option value="hindi">Hindi</option>
+                </select>
+                <button onclick="showRules()">Submit</button>
+            </div>
+        
+            <div id="rules" style="display: none;">
+                <h3 id="rule-title"></h3>
+                <p id="rule-text"></p>
+            </div>
+        
+            <div id="corrections" style="display: none;">
+                <h3>Corrections</h3>
+                <table id="corrections-table" class="table table-hover">
+                    <tr>
+                        <th>Incorrect Sentence</th>
+                        <th>Corrected Sentence</th>
+                    </tr>
+                    <tr>
+                        <td>I like apples, bananas and oranges</td>
+                        <td>I like apples, bananas, and oranges.</td>
+                    </tr>
+                    <tr>
+                        <td>She said, "Hello"</td>
+                        <td>She said, "Hello!"</td>
+                    </tr>
+                    <tr>
+                        <td>He is studying for his exams so he cannot go out.</td>
+                        <td>He is studying for his exams, so he cannot go out.</td>
+                    </tr>
+                    <tr>
+                        <td>The cat jumped onto the table knocked over a vase and then ran away.</td>
+                        <td>The cat jumped onto the table, knocked over a vase, and then ran away.</td>
+                    </tr>
+                    <tr>
+                        <td>After finishing his homework John went to bed.</td>
+                        <td>After finishing his homework, John went to bed.</td>
+                    </tr>
+                    <tr>
+                        <td>The teacher asked, "Who can answer this question?"</td>
+                        <td>The teacher asked, "Who can answer this question?"</td>
+                    </tr>
+                    <tr>
+                        <td>My favorite colors are red blue and green.</td>
+                        <td>My favorite colors are red, blue, and green.</td>
+                    </tr>
+                    <tr>
+                        <td>Sheilas dog barks loudly at night.</td>
+                        <td>Sheila's dog barks loudly at night.</td>
+                    </tr>
+                    <tr>
+                        <td>The party starts at 7:00 pm, so please be on time!</td>
+                        <td>The party starts at 7:00 p.m., so please be on time.</td>
+                    </tr>
+                    <tr>
+                        <td>In his speech the president said, "We must work together to achieve our goals"</td>
+                        <td>In his speech, the president said, "We must work together to achieve our goals."</td>
+                    </tr>
+                </table>
+                
+            </div>
+        
+        
+            <script>
+                function showRules() {
+            var languageSelect = document.getElementById("language-select");
+            var ruleTitle = document.getElementById("rule-title");
+            var ruleText = document.getElementById("rule-text");
+            var language = languageSelect.value;
+            if (language === "Select") {
+                        return; 
+                    }
+            if (language === "english") {
+                ruleTitle.innerText = "Rule:";
+                ruleText.innerText = " Punctuation marks are used to organize and clarify the structure of sentences.";
+            } else if (language === "tamil") {
+                ruleTitle.innerText = "Rule ( விதி):";
+                ruleText.innerText = "வாக்கியங்களின் கட்டமைப்பை ஒழுங்கமைக்கவும் தெளிவுபடுத்தவும் நிறுத்தற்குறிகள் பயன்படுத்தப்படுகின்றன.";
+            } else if (language === "hindi") {
+                ruleTitle.innerText = "Rule ( नियम):";
+                ruleText.innerText = "विराम चिह्नों का प्रयोग वाक्यों की संरचना को व्यवस्थित और स्पष्ट करने के लिए किया जाता है।";
+            }
+        
+            document.getElementById("language-selection").style.display = "none";
+            document.getElementById("rules").style.display = "block";
+            document.getElementById("corrections").style.display = "block"; // Show the corrections table
+        }
+        
+            </script>
+        </div>
+    </div>
+</body>
+</html>
