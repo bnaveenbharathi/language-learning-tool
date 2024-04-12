@@ -9,7 +9,8 @@ body {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    position: relative; /* Added position relative */
+    position: relative; 
+    
   }
 
   .frame {
@@ -61,8 +62,10 @@ justify-content: center;
 align-items: center;
  width: 100vw;
 height: 100vh;
+
 background-image: linear-gradient(-45deg, #e3eefe 0%, #e7f2fd 100%);
 }
+
 
 .sidebar{
 position: fixed;
@@ -268,14 +271,18 @@ color: #d6adff;
 margin: 0;
 }
 /* custom css */
-#responseContainer {
-  width: 60%;
+.resi {
+  width: 90%;
+  max-height: calc(100vh - 280px);
+  margin-top: 280px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  position: fixed;
   overflow-y: auto;
-  max-height: calc(150vh - 250px);
-  margin-top: 330px;
-  border-bottom: solid 2px #A890FE;
- 
+  top: 0;
 }
+
 
 .heading {
   position: fixed;
@@ -320,10 +327,7 @@ margin: 0;
 }
 
 #clearButton {
-  position: fixed;
-  top: 260px;
-  text-align: center;
-  z-index: 999;
+  margin-left: 25px;
 }
 
 .navbar {

@@ -20,48 +20,48 @@
         <div class="logo_item">
           <span>{{ title }}</span>
         </div>
-        <div class="navbar_content">
-          <i class="fa fa-sun" id="darkLight"></i>
-          <i class="fa fa-bell"></i>
-        </div>
-      </nav>
-      
-    <input type="checkbox" id="check">
-    <label for="check">
-      <i class="fa fa-angle-double-right	" id="btn"> </i>
-      <i class="fa fa-angle-double-left	" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-      <header>{{ title }}</header>
-      <a href="#" class="active">
-        <i class="fas fa-qrcode"></i>
-        <span>Dashboard</span>
-      </a>
-      <a href="#">
-        <i class="fas fa-link"></i>
-        <span>Shortcuts</span>
-      </a>
-      <a href="#">
-        <i class="fas fa-stream"></i>
-        <span>Overview</span>
-      </a>
-      <a href="#">
-         <i class="fas fa-calendar"></i>
-        <span>Events</span>
-      </a>
-      <a href="#">
-        <i class="far fa-question-circle"></i>
-        <span>About</span>
-      </a>
-      <a href="/Profile">
-        <i class="fa fa-user"></i>
-        <span>Profile</span>
-      </a>
-      <a href="/logout">
-        <i class="fa fa-sign-out"></i>
-        <span>Log out</span>
-      </a>
-    </div>
+        
+  <div class="navbar_content">
+    <!-- <i class="fa fa-bell"></i> -->
+  </div>
+</nav>
+  
+<input type="checkbox" id="check">
+<label for="check">
+  <i class="fa fa-angle-double-right	" id="btn"> </i>
+  <i class="fa fa-angle-double-left	" id="cancel"></i>
+</label>
+<div class="sidebar">
+  <header>{{ title }}</header>
+  <a href="/dashboard" class="active">
+    <i class="fas fa-qrcode"></i>
+    <span>Dashboard</span>
+  </a>
+  <a href="/alphabets">
+    <i class="fa-solid fa-spell-check"></i>
+    <span>Alphabets</span>
+  </a>
+  <a href="/Vocabulary">
+    <i class="fa-solid fa-language" ></i>
+   <span>Vocabulary</span>
+ </a>
+  <a href="/grammar">
+    <i class="fa-brands fa-leanpub"></i>
+    <span>Grammar</span>
+  </a>
+  <!-- <a href="/alphabets">
+    <i class="fa-solid fa-book-open"></i>
+    <span>Alphabets</span>
+  </a> -->
+  <a href="/Profile">
+    <i class="fa fa-user"></i>
+    <span>Profile</span>
+  </a>
+  <a href="/logout">
+    <i class="fa fa-sign-out"></i>
+    <span>Log out</span>
+  </a>
+</div>
     
 
   
@@ -69,14 +69,18 @@
     <form id="questionForm" action="/ask" method="post" onsubmit="return validateForm()">
       <input type="text" id="questionInput" name="question" placeholder="Your question..." class="">
       <button type="button" onclick="askQuestion()" class="btn btn-outline-info">Ask</button>
+
     </form>
+    <button id="clearButton" class="btn btn-primary">Clear Responses</button>
+
+
   </div>
-  <button id="clearButton" class="btn btn-primary">Clear Responses</button>
-  
+ <div class="resi">
   <div id="responseContainer">
-  </div>
+  </div></div>
   <hr><hr><hr>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="https://kit.fontawesome.com/181ea7bd20.js" crossorigin="anonymous"></script>
   <script>
     // Function to handle form submission
     function handleSubmit(question) {
