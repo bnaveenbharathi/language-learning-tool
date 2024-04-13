@@ -313,7 +313,8 @@
     background: #fff;
     padding: 20px;
     width: 80%;
-    height: 1800px;
+    min-height: fit-content;
+    overflow-y: scroll;
     
   }
   .contents{
@@ -326,7 +327,7 @@
   }
    .head{
     display:block;
-    margin-top: 550px;
+    margin-top: 50px;
     text-align: center;
   }
   .head p{

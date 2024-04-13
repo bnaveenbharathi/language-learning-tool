@@ -58,7 +58,7 @@ height: 100%;
 background-color: #fff;
 transition: all .5s ease;
 overflow-y: auto; 
-z-index: 1000; /* Added z-index */
+z-index: 1000; 
 }
 .sidebar header{
 font-size: 28px;
@@ -166,10 +166,8 @@ visibility: visible;
   margin-top: 50px;
 }
 
-/* Adjustments for sidebar */
 
 
-/* Hide header elements on small screens */
 header, #btn, #cancel {
   display:block;
  
@@ -177,7 +175,6 @@ header, #btn, #cancel {
 
 
 
-/* Adjust sidebar link height and icon margin */
 .sidebar a {
   height: 60px;
 }
@@ -212,7 +209,6 @@ label #cancel {
 }
 
 
-/* Add this CSS to ensure the toggle button is displayed */
 label #cancel {
 opacity: 0;
 visibility: hidden;

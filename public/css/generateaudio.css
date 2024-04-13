@@ -50,7 +50,7 @@
   height: 100%;
   background-color: #fff;
   transition: all .5s ease;
-  z-index: 1000; /* Added z-index */
+  z-index: 1000; 
   }
   .sidebar header{
   font-size: 28px;
@@ -136,13 +136,10 @@
   visibility: visible;
   }
   @media(max-width: 860px) {
-  /* Adjustments for header */
  
   
-  /* Adjustments for sidebar */
   
   
-  /* Hide header elements on small screens */
   header, #btn, #cancel {
     display:block;
    
@@ -160,10 +157,8 @@
     margin-left: -10px;
   }
   
-  /* Adjust hover width for sidebar links */
   
   
-  /* Show span on hover for sidebar links */
   .sidebar a:hover span {
     opacity: 1;
     visibility: visible;
@@ -188,7 +183,6 @@
   transition: all .5s ease;
   }
   
-  /* Add this CSS to ensure the toggle button is displayed */
   label #cancel {
   opacity: 0;
   visibility: hidden;

@@ -58,7 +58,7 @@
   background-color: #fff;
   transition: all .5s ease;
   overflow-y: auto; 
-  z-index: 1000; /* Added z-index */
+  z-index: 1000;
   }
   .sidebar header{
   font-size: 28px;
@@ -144,7 +144,6 @@
   visibility: visible;
   }
   @media(max-width: 860px) {
-  /* Adjustments for header */
   .heading h1 {
     position: fixed;
     top: 20px;
@@ -166,10 +165,8 @@
     margin-top: 50px;
   }
   
-  /* Adjustments for sidebar */
   
   
-  /* Hide header elements on small screens */
   header, #btn, #cancel {
     display:block;
    
@@ -177,7 +174,6 @@
   
   
   
-  /* Adjust sidebar link height and icon margin */
   .sidebar a {
     height: 60px;
   }
@@ -193,7 +189,7 @@
   }label #btn,
   label #cancel {
     position: fixed;
-    top: 45px; /* Adjust the top position */
+    top: 45px; 
     left: 5px;
     cursor: pointer;
     color: #d6adff;
@@ -212,7 +208,6 @@
   }
   
   
-  /* Add this CSS to ensure the toggle button is displayed */
   label #cancel {
   opacity: 0;
   visibility: hidden;
@@ -271,7 +266,6 @@
     cursor: pointer;
   }
   
-  /* Responsive Styles */
   @media screen and (max-width: 768px) {
     .navbar {
       padding: 15px;

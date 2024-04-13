@@ -1,16 +1,16 @@
 const gtts = require('gtts');
 const natural = require('natural');
 
-// Function to perform basic NLP tasks using Natural
+// NLP tasks using Natural
 function analyzeText(text) {
-    // Tokenize the text
+    
     const tokenizer = new natural.WordTokenizer();
     const tokens = tokenizer.tokenize(text);
 
     return { tokens };
 }
 
-// Function to generate audio for a single letter
+//generate audio for a single letter
 async function generateAudioForLetter(letter) {
     const language = 'en'; 
     const speech = new gtts(letter, language, true);

@@ -4,9 +4,9 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const httpProxy = require('http-proxy');
 const collection = require('./Database/db');
-const lettersData = require('./views/letters.json');
-const tamillettersData = require('./views/tamil.json');
-const hindilettersData = require('./views/hindi.json');
+const lettersData = require('./views/custom data/letters.json');
+const tamillettersData = require('./views/custom data/tamil.json');
+const hindilettersData = require('./views/custom data/hindi.json');
 const { analyzeText, generateAudioForLetter, generateAudioForWord, generateSplitAudioForWord } = require('./NLP/wordaudiogen');
 const fs = require('fs');
 const gtts = require('gtts');
@@ -14,7 +14,7 @@ const gtts = require('gtts');
 const app = express();
 const proxy = httpProxy.createProxyServer({ target: 'http://localhost:5000' }); // Add target for proxy
 
-app.set('view engine', 'ejs'); // view engine
+app.set('view engine', 'ejs'); 
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -22,16 +22,17 @@ app.use(express.urlencoded({ extended: false }));
 
 // Configure express-session
 app.use(session({
-    secret: '9ceee8fddd028b773b7e1f3714efe0960e5f3b7a08dfe45a8c28149e000876fc2beacc9ba657449eabd2670df75d2968e0c2556d55de0eec4c39c983aabc2c20', // Change this to your secret key
+    secret: '9ceee8fddd028b773b7e1f3714efe0960e5f3b7a08dfe45a8c28149e000876fc2beacc9ba657449eabd2670df75d2968e0c2556d55de0eec4c39c983aabc2c20', 
     resave: false,
     saveUninitialized: false
 }));
 
 const title = "G-Fluent";
-const data = JSON.parse(fs.readFileSync('views/tenses.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync('views/custom data/tenses.json', 'utf8'));
+const tamildata = JSON.parse(fs.readFileSync('views/custom data/tamiltenses.json', 'utf8'));
+const hindidata = JSON.parse(fs.readFileSync('views/custom data/hinditense.json', 'utf8'));
 // check if the user is authenticated
 const authenticateUser = (req, res, next) => {
-    // Check if user is logged in
     if (req.session && req.session.userId) {
         next();
     } else {
@@ -41,16 +42,15 @@ const authenticateUser = (req, res, next) => {
 
 const renderUsername = async (req, res, next) => {
     try {
-        const userId = req.session.userId; // Retrieve userId from session
+        const userId = req.session.userId; 
         if (!userId) {
-            res.locals.username = null; // Set username to null if user is not logged in
+            res.locals.username = null; 
             return next();
         }
         
-        // Fetch user data from the database
+        // Fetch user data 
         const user = await collection.findOne({ _id: userId });
 
-        // Set username to the locals object for use in templates
         res.locals.username = user.name;
         next();
     } catch (error) {
@@ -122,8 +122,8 @@ app.post('/login', async (req, res) => {
 });
 
 
-// Protected routes (accessible only to authenticated users)
-// app.use(authenticateUser);
+// Protected routes authenticated users)
+app.use(authenticateUser);
 
 app.get('/profile', async (req, res) => {
     try {
@@ -132,10 +132,8 @@ app.get('/profile', async (req, res) => {
             return res.redirect('/login');
         }
         
-        // Fetch user data from the database
         const user = await collection.findOne({ _id: userId });
 
-        // Render profile page with user data
         res.render('profile', { title: title, user: user });
     } catch (error) {
         console.error("Error rendering profile page:", error);
@@ -187,6 +185,28 @@ app.post('/tense', (req, res) => {
     const examples = tenseData ? tenseData.examples : [];
     res.render('tenselearning', { selectedTense, examples, tenses: Object.keys(data.tenses),title: title  });
 });
+app.get('/tamiltenselearning', (req, res) => {
+    const tenses = Object.keys(tamildata.tenses);
+    res.render('tamiltense', { tenses ,title: title });
+});
+app.post('/tamiltense', (req, res) => {
+    const selectedTense = req.body.tense;
+    const tenseData = tamildata.tenses[selectedTense];
+    const examples = tenseData ? tenseData.examples : [];
+    const allTenses = Object.keys(tamildata.tenses);
+    res.render('tamiltense', { selectedTense, examples, tenses: allTenses, title: "Tamil Tense Learning" });
+});
+app.get('/hinditenselearning', (req, res) => {
+    const tenses = Object.keys(hindidata.tenses);
+    res.render('hinditense', { tenses ,title: title });
+});
+app.post('/hinditense', (req, res) => {
+    const selectedTense = req.body.tense;
+    const tenseData = hindidata.tenses[selectedTense];
+    const examples = tenseData ? tenseData.examples : [];
+    const allTenses = Object.keys(tamildata.tenses);
+    res.render('hinditense', { selectedTense, examples, tenses: allTenses, title: "Tamil Tense Learning" });
+});
 app.get('/wordaudio', (req, res) => {
     res.render('wordaudio', { title: title });
 });
@@ -194,14 +214,12 @@ app.get('/wordaudio', (req, res) => {
 app.post('/generate-audio', async (req, res) => {
     const word = req.body.word.toUpperCase();
 
-    // Start the timer for NLP analysis
     console.time('nlpAnalysis');
 
     const nlpAnalysis = analyzeText(word);
 
     console.timeEnd('nlpAnalysis');
 
-    // Start the timer for generating audio for the word
     console.time('generateAudioForWord');
 
     const wordAudio = await generateAudioForWord(word);
@@ -216,7 +234,6 @@ app.post('/generate-audio', async (req, res) => {
 
     console.time('generateAudioForLetter');
 
-    // Generate audio for each letter in the word
     const letters = word.split('');
     const letterAudios = [];
     for (const letter of letters) {
@@ -274,7 +291,6 @@ app.post('/updateProfile', async (req, res) => {
     const { name, email, age } = req.body;
 
     try {
-        // Find the user by userId
         const user = await collection.findOne({ _id: userId });
         if (!user) {
             return res.status(404).send('User not found');
@@ -285,7 +301,6 @@ app.post('/updateProfile', async (req, res) => {
         user.email = email;
         user.age = age;
 
-        // Save the updated user object to the database
         await user.save();
 
        
@@ -300,10 +315,9 @@ app.post('/updateProfile', async (req, res) => {
 
 app.get('/tamilwords', (req, res) => {
     
-    // Read JSON file based on language selection
     const language = req.query.language || ''; 
     const category = req.query.category || ''; 
-    const data = JSON.parse(fs.readFileSync('./views/tamilword.json', 'utf8'));
+    const data = JSON.parse(fs.readFileSync('./views/custom data/tamilword.json', 'utf8'));
 
     let words = [];
     if (language && category && data[category]) {
@@ -324,7 +338,7 @@ app.get('/englishwords', (req, res) => {
     // Read JSON file 
     const language = req.query.language || ''; 
     const category = req.query.category || ''; 
-    const data = JSON.parse(fs.readFileSync('./views/englishword.json', 'utf8'));
+    const data = JSON.parse(fs.readFileSync('./views/custom data/englishword.json', 'utf8'));
 
     let words = [];
     if (language && category && data[category]) {
@@ -343,10 +357,9 @@ app.get('/englishwords', (req, res) => {
 });
 
 app.get('/hindiwords', (req, res) => {
-    // Read JSON file based on language selection
     const language = req.query.language || ''; 
     const category = req.query.category || ''; 
-    const data = JSON.parse(fs.readFileSync('./views/hindiword.json', 'utf8'));
+    const data = JSON.parse(fs.readFileSync('./views/custom data/hindiword.json', 'utf8'));
 
     let words = [];
     if (language && category && data[category]) {
@@ -393,7 +406,7 @@ app.post('/changePassword', async (req, res) => {
 });
 
 // Proxy connect
-app.all('/ai/*', (req, res) => {
+app.all('/*', (req, res) => {
     proxy.web(req, res, { target: 'http://localhost:5000' }, (err) => {
         console.error('Proxy error:', err);
         res.status(500).send('Proxy Error');

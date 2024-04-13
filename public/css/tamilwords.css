@@ -322,3 +322,12 @@ label{
  border: solid 1px #c1b1f7;
  background: #e8d1ff;
 }
+
+  .main-content{
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    height: 300px;
+    overflow-y: scroll;
+  }
+ 

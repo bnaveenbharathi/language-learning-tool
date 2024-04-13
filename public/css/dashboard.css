@@ -42,7 +42,7 @@
   height: 100%;
   background-color: #fff;
   transition: all .5s ease;
-  z-index: 1000; /* Added z-index */
+  z-index: 1000; 
   }
   .sidebar header{
   font-size: 28px;
@@ -325,9 +325,11 @@
   max-width: 500px; 
   text-align: center;
   padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1); 
-  margin-top: 40px;
+  border-radius: 13px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  margin-top: 80px;
+  box-shadow: 0 0 10px rgba(28, 28, 28, 0.5);
+
 
   
 }
@@ -376,49 +378,19 @@ section {
   line-height: 1.5;
 }
 
-.super-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-}
+.super-button{
+  padding: 8px;
+  border: 1px solid #250049;
+  border-radius: 5px;
+  background: #d6adff;
+  transition: 1s ;
 
-.super-button::before,
-.super-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid transparent;
-  transition: all 0.3s;
 }
-
-.super-button::before {
-  border-top-color: #fff;
-  border-right-color: #fff;
+.super-button:hover{
+  box-shadow: 0 0 10px rgba(3, 184, 204, 0.5);
+  background: transparent;
+  
 }
-
-.super-button::after {
-  border-bottom-color: #fff;
-  border-left-color: #fff;
-}
-
-.super-button:hover::before {
-  border-top-color: #4CAF50;
-  border-right-color: #4CAF50;
-}
-
-.super-button:hover::after {
-  border-bottom-color: #4c9eaf;
-  border-left-color:  #4c9eaf;
-}
-
 
 img {
   height: 300px;
@@ -433,6 +405,6 @@ footer p a{
   color: #c1b1f7;
   text-decoration: none;
 }
-footer p a:hover{
+footer p #a:hover{
   color: #250049;
 }

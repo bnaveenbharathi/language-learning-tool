@@ -48,6 +48,8 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
+  
+  
   background-image: linear-gradient(-45deg, #e3eefe 0%, #e7f2fd 100%);
   }
   
@@ -313,11 +315,13 @@
     background: #fff;
     padding: 20px;
     width: 80%;
-    height: 1200px;
+    
+    min-height: fit-content;
+    overflow-y: auto;
     
   }
   .contents{
-    margin-top: 80px;  
+    margin-top: 0px;  
   }
   .contents {
     display: flex;
@@ -326,7 +330,7 @@
   }
    .head{
     display:block;
-    margin-top: 300px;
+    margin-top: 50px;
     text-align: center;
   }
   .head p{
@@ -336,6 +340,7 @@
     justify-content: center;
     margin-left: 100px;
     margin-top: 30px;
+    margin-bottom: 50px;
   }
   
   .audio-wrapper {
